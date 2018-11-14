@@ -1,5 +1,13 @@
 .Rproj.user
 .Rhistory
 .RData
-.Ruserdata
-packrat/lib*/
+.DS_Store
+
+README.html
+CONTRIBUTING.html
+PANDOC.html
+issues/
+
+
+auto/
+packrat/

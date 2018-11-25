@@ -1,30 +1,83 @@
 ---
-title: "TrabalhoGrupo6"
-author: "Grupo6"
+title: "Trabalho Grupo 6 - O Uso da Midia Social no Ensino Superior"
+author: "Bruna Passerani, Guilherme Fuentes, Priscila da Rocha, Vittoria Zago, Winea Pasquareli"
 date: "13 de novembro de 2018"
 output: pdf_document
+mainfont: Arial
+fontsize: 12pt
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Carregando a biblioteca para leitura e gravação de planilhas Excel formato 'xlsx'
+if (!require(readxl)) install.packages('readxl')
+library(readxl)
+#library(rmarkdown)
+# Lendo a planilha
+df <- read_xlsx("C:/Users/Winy/Documents/GitHub/Grupo-6/dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+##  Introducao
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
+## Fundamentacao Teorica
 
-You can also embed plots, for example:
+### R
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+### R Markdown
+  R Markdown foi projetado com o intuito de facilitar a reprodutibilidade, já que tanto o código de computação quanto as narrativas (parte textual) estão no mesmo documento, no qual os resultados são gerados automaticamente a partir do código-fonte. 
+  A maneira usual de compilar um documento R Markdown é clicar no botão “Knit” sendo o atalho de teclado correspondente é Ctrl + Shift + K, após clicar na opção o RStudio chama a função rmarkdown :: render () para renderizar o documento em uma nova sessão R, a reprodutibilidade é a principal razão pela qual o RStudio usa uma nova  sessão do R para renderizar seus documentos Rmd: na maioria dos casos, o usuário quer que seus documentos continuem a funcionar da próxima vez que for utilizar o R em ambientes de computação de outras pessoas.
+  Existem dois tipos de formatos de saída no pacote rmarkdown: documentos e apresentações. Todos os formatos disponíveis estão listados abaixo:
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Apresentação beamer
+Apresentação ioslides
+Apresentação em powerpoint
+Apresentação slidy
+Documento github
+Documento HTML
+Documento pdf
+Documento do Word
+Documento latex
+Documento MD
+Documento ODT
+Documento RTF
+
+### Github
+
+## UNESP
+
+##Dados Censitarios
+  Na pesquisa realizada tivemos a participação da seguinte proporção de público feminino e masculino:
+# Gênero
+# 1.Prefiro não declarar
+# 2.Masculino e 
+# 3.Feminino
+sexo=table(df$genero)
+sexo
+# A variável "lbls" define os rótulos mostrados na figura
+lbls <- c("Masculino", "Feminino")
+# A variável "pct" exibe em porcentagem
+pct <- round(sexo/sum(sexo)*100, digits=1)
+pct
+# O primeiro gráfico a ser elaborado, será do tipo pizza (pie) para a variável "sexo".
+# A variável "lbls" concatena os elementos (nomes) e os valores (em porcentagem)
+lbls <- paste0(pct,"% ", lbls) # add percents to labels
+lbls
+png(filename="C:/Users/Winy/Documents/GitHub/Grupo-6/graficos/Genero.png", width = 800, height = 500, pointsize = 16)
+# Definindo a cor de fundo do gráfico
+par(bg = "bisque")
+#
+# Geração do gráfico tipo pizza (pie)
+pie(sexo, labels = lbls, edges = 100, angle = 45, col = c("deepskyblue","darkviolet", "green3"), main = "Genero dos participantes")
+
+# Não se esquecer de chamar a funcao "dev.off()" para fechar o arquivo gravado!
+# Este comando "dev.off()" é utilzado em complemento com a funcao png (ou outras funcoes para gerar arquivos graficos)
+dev.off()
+
+  Conforme mostrado na figura tivemos participação de 60,7% publico masculino e 39,3% de publico feminino.
+
+## Opiniao sobre uso das m?dias sociais no ensino
+
+

@@ -14,12 +14,14 @@ fontsize: 12pt
 knitr::opts_chunk$set(echo = TRUE)
 if (!require(readxl)) install.packages('readxl')
 library(readxl)
-df <- read_xlsx("C:/Users/Winy/Documents/GitHub/Grupo-6/dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
+df <- read_xlsx("dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
 ```
 
 
 ##  Introducao
-
+  Este trabalho tem como objetivo estudar os dados e levantar assim informações sobre o uso das mídias sociais nos discentes da instituição de nível superior UNESP em Bauru, SP. Através da ciência de dados, procuramos descobrir a relevância da mídia social para essa população: quais são mais usadas, por quanto tempo, com qual finalidade, e quais características influenciam nesse resultado. 
+  Com esse resultado, informações valiosas podem ser extraídas e usadas estrategicamente, pelos professores ao conseguirem melhor propagação do conteúdo ensinado por exemplo, ou empresas de marketing atingirem melhores resultados ao investir mais em uma rede social.
+  Nos próximos capítulos, veremos uma análise sobre as ferramentas e técnicas utilizadas, além das representações gráficas dos estudos realizados.
 
 ## Fundamentacao Teorica
 
@@ -63,7 +65,7 @@ pct
 
 lbls <- paste0(pct,"% ", lbls) # add percents to labels
 lbls
-png(filename="C:/Users/Winy/Documents/GitHub/Grupo-6/graficos/Genero.png", width = 800, height = 500, pointsize = 16)
+png(filename="graficos/Genero.png", width = 800, height = 500, pointsize = 16)
 par(bg = "bisque")
 
 ### Geração do gráfico tipo pizza (pie)
@@ -89,7 +91,7 @@ rotulos <- c("Entre 16 e 20 anos", "Entre 21 e 25 anos", "Entre 26 e 30 anos",
 porc_Idade <- round(idade/sum(idade)*100, digits=1)
 porc_Idade
 
-png(filename="C:/Users/Winy/Documents/GitHub/Grupo-6/graficos/Idade.png", width = 800, height = 500, pointsize = 16)
+png(filename="graficos/Idade.png", width = 800, height = 500, pointsize = 16)
 
 
 par(bg = "bisque")
@@ -124,7 +126,7 @@ rot <- c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi�rio",
              "Trabalha por conta pr�pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes")
 porc_Trabalha <- round(trabalha/sum(trabalha)*100, digits=1)
 porc_Trabalha
-png(filename="C:/Users/Winy/Documents/GitHub/Grupo-6/graficos/Trabalha.png", width = 800, height = 500, pointsize = 16)
+png(filename="graficos/Trabalha.png", width = 800, height = 500, pointsize = 16)
 
 # Definindo a cor de fundo do gráfico
 par(bg = "bisque")
@@ -149,6 +151,61 @@ legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integra
 
 dev.off()
   
+
+ Também foi levantado o estado civil dos participantes, onde apenas 1.6% dos participantes se declararam casados, e os outros 98.4% como solteiros. 
+## Estado Civil
+### Dicionário de dados
+### 1. Solteiro (a)
+### 2. Casado (a)
+### 3. União Estável
+### 4. Viúvo (a)
+### 5. Separado (a)
+### 6. Prefiro não declarar
+estadocivil=table(df$estadocivil)
+estadocivil
+
+lbls <- c("solteiro", "casado", "uniao", "viuvo", "separado", "naodeclara")
+
+pct <- round(estadocivil/sum(estadocivil)*100, digits=1)
+pct
+
+lbls <- paste0(pct,"% ", lbls) # add percents to labels
+lbls
+png(filename="graficos/EstadoCivil.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+### Geração do gráfico tipo pizza (pie)
+pie(estadocivil, labels = lbls, edges = 100, angle = 45, col = c("deepskyblue","darkviolet", "green3"), main = "Estado Civil dos participantes")
+
+dev.off()
+
+  Quanto a quantidade de filhos, 100% dos participantes declararam não ter nenhum filho, o que se mostra bem coerente com os participantes onde mais de 95% está abaixo dos 25 anos e quase 95% como solteiros. Já foi comprovado que as mulheres com maior nível de escolaridade, postergam mais seus filhos e diminuem a taxa de fecundidade, além disso, no Brasil é mais comum ter filhos após o casamento.
+  ## Dicionário de dados
+### 1. Sem filhos
+### 2. Um filho
+### 3. Dois filhos
+### 4. Três filhos
+### 5. Mais de três filhos
+
+temfilhos=table(df$filhos)
+temfilhos
+lbls <- c("Sem Filhos", "Um", "Dois", "Tres", "Mais de Três Filhos")
+porc_temfilhos <- round(temfilhos/sum(temfilhos)*100, digits=1)
+porc_temfilhos
+png(filename="graficos/TemFilhos.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+lbls <- paste0(porc_temfilhos,"% ", lbls) # add percents to labels
+lbls
+
+
+### Geração do gráfico tipo pizza (pie)
+pie(temfilhos, labels = lbls, edges = 100, angle = 45, 
+    col = c("deepskyblue","darkviolet", "green3"), main = "Quantidade de filhos dos participantes")
+
+dev.off()
+
+  Também foi questionado a faixa etária dos filhos, mas como nenhum participante declarou ter filhos, essa análise não foi representada gráficamente. Lembrando que não possuir filhos se mostra mais comum nessa população, o que pode influenciar no tempo que eles passam nas mídias, ou se estão solteiros quais mídias eles usam mais. Assim como se tivesse a faixa etária dos filhos declarada, poderia influenciar no tempo dedicado nas mídias dependendo da idade do filho.
 # Opiniao sobre uso das midias sociais no ensino
 
 

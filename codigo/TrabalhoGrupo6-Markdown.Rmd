@@ -1,8 +1,11 @@
 ---
 title: "Trabalho Grupo 6 - O Uso da Midia Social no Ensino Superior"
-author: "Bruna Passerani, Guilherme Fuentes, Priscila da Rocha, Vittoria Zago, Winea Pasquareli"
+author: Bruna Passerani, Guilherme Fuentes, Priscila da Rocha, Vittoria Zago, Winea
+  Pasquareli
 date: "13 de novembro de 2018"
-output: pdf_document
+output:
+  pdf_document: default
+  word_document: default
 mainfont: Arial
 fontsize: 12pt
 ---
@@ -10,11 +13,11 @@ fontsize: 12pt
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# Carregando a biblioteca para leitura e gravação de planilhas Excel formato 'xlsx'
+
 if (!require(readxl)) install.packages('readxl')
 library(readxl)
 #library(rmarkdown)
-# Lendo a planilha
+
 df <- read_xlsx("C:/Users/Winy/Documents/GitHub/Grupo-6/dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
 
 
@@ -50,34 +53,72 @@ Documento RTF
 
 ##Dados Censitarios
   Na pesquisa realizada tivemos a participação da seguinte proporção de público feminino e masculino:
-# Gênero
-# 1.Prefiro não declarar
-# 2.Masculino e 
-# 3.Feminino
+### Gênero
+### 1.Prefiro não declarar
+### 2.Masculino e 
+### 3.Feminino
 sexo=table(df$genero)
 sexo
-# A variável "lbls" define os rótulos mostrados na figura
+
 lbls <- c("Masculino", "Feminino")
-# A variável "pct" exibe em porcentagem
+
 pct <- round(sexo/sum(sexo)*100, digits=1)
 pct
-# O primeiro gráfico a ser elaborado, será do tipo pizza (pie) para a variável "sexo".
-# A variável "lbls" concatena os elementos (nomes) e os valores (em porcentagem)
+
 lbls <- paste0(pct,"% ", lbls) # add percents to labels
 lbls
 png(filename="C:/Users/Winy/Documents/GitHub/Grupo-6/graficos/Genero.png", width = 800, height = 500, pointsize = 16)
-# Definindo a cor de fundo do gráfico
 par(bg = "bisque")
-#
-# Geração do gráfico tipo pizza (pie)
+
+### Geração do gráfico tipo pizza (pie)
 pie(sexo, labels = lbls, edges = 100, angle = 45, col = c("deepskyblue","darkviolet", "green3"), main = "Genero dos participantes")
 
-# Não se esquecer de chamar a funcao "dev.off()" para fechar o arquivo gravado!
-# Este comando "dev.off()" é utilzado em complemento com a funcao png (ou outras funcoes para gerar arquivos graficos)
 dev.off()
 
   Conforme mostrado na figura tivemos participação de 60,7% publico masculino e 39,3% de publico feminino.
 
-## Opiniao sobre uso das m?dias sociais no ensino
+  A faixa etária dos participantes foi a seguinte:
+## Faixa Etaria
+### 1. Entre 16 e 20 anos
+### 2. Entre 21 e 25 anos
+### 3. Entre 26 e 30 anos
+### 4. Entre 30 e 35 anos
+### 5. Entre 36 e 40 anos
+### 6. Acima de 40 anos
+
+idade=table(df$idade)
+idade
+rotulos <- c("Entre 16 e 20 anos", "Entre 21 e 25 anos", "Entre 26 e 30 anos", 
+"Entre 30 e 35 anos","Entre 36 e 40 anos", "6. Acima de 40 anos")
+porc_Idade <- round(idade/sum(idade)*100, digits=1)
+porc_Idade
+
+png(filename="C:/Users/Winy/Documents/GitHub/Grupo-6/graficos/Idade.png", width = 800, height = 500, pointsize = 16)
+
+
+par(bg = "bisque")
+
+### Geração do gráfico tipo barra (barplot)
+my_bar=barplot(idade, border=F, names.arg = NA, las=2,
+               col = c("green","deepskyblue", "yellow", "red","purple", "pink"),
+               ylab = "Quantidade",
+               xlab = "Faixa Etaria",
+               ylim = c(0,80),
+               main = "Idade dos Participantes")
+
+text(my_bar, idade+4, paste("n = ",idade,sep=""),cex=1) 
+
+
+legend("topleft", legend = c("Entre 16 e 20 anos", "Entre 21 e 25 anos", "Entre 26 e 30 anos", "Entre 30 e 35 anos",
+        "Entre 36 e 40 anos", "6. Acima de 40 anos"),
+       col = c("green","deepskyblue", "yellow", "red","purple", "pink"),
+       bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
+       horiz = FALSE, inset = c(0.05, 0.05))
+
+dev.off()
+
+  Após análise grafica temos que 42,6% dos participantes pertenciam à faixa etária entre 16 e 20 anos, 52,5% na faixa etária entre 21 e 25 anos e 4,9% na faixa etária entre 26 e 30 anos. A faixa etária dos participantes tem grande impacto para a pesquisa pois é composta da proxima geração ingressante no Ensino Superior etambém daqueles que a estão cursando neste momento. As mídias sociais estão presentes na vida dos estudantes do ensino superior e alguns estudos apontaram que grande parte destes estudantes usam as mídias sociais para interação com outros usuários e para construção de relacionamentos.
+  
+# Opiniao sobre uso das midias sociais no ensino
 
 

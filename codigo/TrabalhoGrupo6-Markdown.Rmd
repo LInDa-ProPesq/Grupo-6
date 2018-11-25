@@ -10,16 +10,12 @@ mainfont: Arial
 fontsize: 12pt
 ---
 
-```{r setup, include=FALSE}
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-```
-
 if (!require(readxl)) install.packages('readxl')
 library(readxl)
-#library(rmarkdown)
-
 df <- read_xlsx("C:/Users/Winy/Documents/GitHub/Grupo-6/dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
-
+```
 
 
 ##  Introducao
@@ -31,7 +27,7 @@ df <- read_xlsx("C:/Users/Winy/Documents/GitHub/Grupo-6/dados/umses_graduacao_20
 
 ### R Markdown
   R Markdown foi projetado com o intuito de facilitar a reprodutibilidade, já que tanto o código de computação quanto as narrativas (parte textual) estão no mesmo documento, no qual os resultados são gerados automaticamente a partir do código-fonte. 
-  A maneira usual de compilar um documento R Markdown é clicar no botão “Knit” sendo o atalho de teclado correspondente é Ctrl + Shift + K, após clicar na opção o RStudio chama a função rmarkdown :: render () para renderizar o documento em uma nova sessão R, a reprodutibilidade é a principal razão pela qual o RStudio usa uma nova  sessão do R para renderizar seus documentos Rmd: na maioria dos casos, o usuário quer que seus documentos continuem a funcionar da próxima vez que for utilizar o R em ambientes de computação de outras pessoas.
+  A maneira usual de compilar um documento R Markdown é clicar no botão “Knit” sendo o atalho de teclado correspondente é Ctrl + Shift + K, após clicar na opção o RStudio chama a função rmarkdown :: render () para renderizar o documento em uma nova sessão R, a reprodutibilidade é a principal razão pela qual o RStudio usa uma nova  sessão do R para renderizar seus documentos Rmd: na maioria dos casos, o usuário quer que seus documentos continuem a funcionar da próxima vez que for utilizar o R em ambientes de computação de outras pessoas.
   Existem dois tipos de formatos de saída no pacote rmarkdown: documentos e apresentações. Todos os formatos disponíveis estão listados abaixo:
 
 Apresentação beamer
@@ -117,7 +113,41 @@ legend("topleft", legend = c("Entre 16 e 20 anos", "Entre 21 e 25 anos", "Entre 
 
 dev.off()
 
-  Após análise grafica temos que 42,6% dos participantes pertenciam à faixa etária entre 16 e 20 anos, 52,5% na faixa etária entre 21 e 25 anos e 4,9% na faixa etária entre 26 e 30 anos. A faixa etária dos participantes tem grande impacto para a pesquisa pois é composta da proxima geração ingressante no Ensino Superior etambém daqueles que a estão cursando neste momento. As mídias sociais estão presentes na vida dos estudantes do ensino superior e alguns estudos apontaram que grande parte destes estudantes usam as mídias sociais para interação com outros usuários e para construção de relacionamentos.
+  Apos análise grafica temos que 42,6% dos participantes pertenciam à faixa etária entre 16 e 20 anos, 52,5% na faixa etária entre 21 e 25 anos e 4,9% na faixa etária entre 26 e 30 anos. A faixa etária dos participantes tem grande impacto para a pesquisa pois é composta da proxima geração ingressante no Ensino Superior etambém daqueles que a estão cursando neste momento. As mídias sociais estão presentes na vida dos estudantes do ensino superior e alguns estudos apontaram que grande parte destes estudantes usam as mídias sociais para interação com outros usuários e para construção de relacionamentos.
+  
+  ##Situacao Trabalhista
+  A seguir dados sobre situa��o trabalista dos participantes:
+  
+trabalha=table(df$trabalha)
+trabalha
+rot <- c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi�rio",
+             "Trabalha por conta pr�pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes")
+porc_Trabalha <- round(trabalha/sum(trabalha)*100, digits=1)
+porc_Trabalha
+png(filename="C:/Users/Winy/Documents/GitHub/Grupo-6/graficos/Trabalha.png", width = 800, height = 500, pointsize = 16)
+
+# Definindo a cor de fundo do gráfico
+par(bg = "bisque")
+
+# Geração do gráfico tipo barra (barplot)
+my_bar=barplot(trabalha, border=F, names.arg = NA, las=2,
+               col = c("green","deepskyblue", "yellow", "red","purple", "pink", "red","blue"),
+               ylab = "Quantidade",
+               xlab = "Status",
+               ylim = c(0,80),
+               main = "Situacao Trabalhista dos Participantes")
+# Adicionando o texto a ser exibido 
+text(my_bar, trabalha+4, paste("n = ",trabalha,sep=""),cex=1) 
+
+#Agora adicionando a legenda ao gráfico
+legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi�rio",
+        "Trabalha por conta pr�pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes"),
+       col = c("green","deepskyblue", "yellow", "red","purple", "pink", "red","blue"),
+       bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
+       horiz = FALSE, inset = c(0.05, 0.05))
+
+
+dev.off()
   
 # Opiniao sobre uso das midias sociais no ensino
 

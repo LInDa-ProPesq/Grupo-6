@@ -47,6 +47,10 @@ Documento RTF
 
 ### Github
 
+  Git é um sistema de controle de versões distribuído que foi criado por Linus Torvalds em 2005. Um sistema de controle de versões pode ser definido como um software que mantém um registro com as alterações realizadas em determinado projeto ou arquivo ao longo do tempo. Por ser distribuído, todos os integrantes de um projeto possuem acesso a todo o histórico de versões deste e não apenas de seu estado atual. A ideia de sua criação surgiu quando Torvalds e os demais desenvolvedores do kernel Linux decidiram não utilizar mais o software controlador de versões BitKeeper após o detentor dos direitos autorais deste, Larry Macvoy, remover o acesso gratuito à ferramenta. 
+  Como Torvalds desejava uma ferramenta semelhante ao BitKeeper para auxiliar no desenvolvimento do kernel do Linux, decidiu desenvolver seu próprio sistema controlador de versões, criando, assim, o Git. Por conta de sua velocidade e praticidade, o Git obteve sucesso e conseguiu diversos usuários pelo mundo.
+  O GitHub é um site que permite a seus usuários a hospedagem de uma cópia de repositórios Git. Além disso, ele também possibilita a colaboração de integrantes de um grupo para desenvolver um projeto por possuir um local centralizado para compartilhar um repositório, interface web para visualizá-lo e também recursos como forking, pull, requests, issues e wikis que permite discussões, revisões e alterações no projeto junto à equipe de forma eficiente.
+
 ## UNESP
 
 ##Dados Censitarios
@@ -118,12 +122,12 @@ dev.off()
   Apos análise grafica temos que 42,6% dos participantes pertenciam à faixa etária entre 16 e 20 anos, 52,5% na faixa etária entre 21 e 25 anos e 4,9% na faixa etária entre 26 e 30 anos. A faixa etária dos participantes tem grande impacto para a pesquisa pois é composta da proxima geração ingressante no Ensino Superior etambém daqueles que a estão cursando neste momento. As mídias sociais estão presentes na vida dos estudantes do ensino superior e alguns estudos apontaram que grande parte destes estudantes usam as mídias sociais para interação com outros usuários e para construção de relacionamentos.
   
   ##Situacao Trabalhista
-  A seguir dados sobre situa��o trabalista dos participantes:
+  A seguir dados sobre situa??o trabalista dos participantes:
   
 trabalha=table(df$trabalha)
 trabalha
-rot <- c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi�rio",
-             "Trabalha por conta pr�pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes")
+rot <- c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi?rio",
+             "Trabalha por conta pr?pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes")
 porc_Trabalha <- round(trabalha/sum(trabalha)*100, digits=1)
 porc_Trabalha
 png(filename="graficos/Trabalha.png", width = 800, height = 500, pointsize = 16)
@@ -142,8 +146,8 @@ my_bar=barplot(trabalha, border=F, names.arg = NA, las=2,
 text(my_bar, trabalha+4, paste("n = ",trabalha,sep=""),cex=1) 
 
 #Agora adicionando a legenda ao gráfico
-legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi�rio",
-        "Trabalha por conta pr�pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes"),
+legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi?rio",
+        "Trabalha por conta pr?pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes"),
        col = c("green","deepskyblue", "yellow", "red","purple", "pink", "red","blue"),
        bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
        horiz = FALSE, inset = c(0.05, 0.05))

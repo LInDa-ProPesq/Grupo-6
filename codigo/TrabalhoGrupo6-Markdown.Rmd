@@ -318,7 +318,7 @@ dev.off()
   my_bar=barplot(redes_sociais, border=F, names.arg = NA, las=2,
                  col = c("deepskyblue", "orange","darkviolet", "green3", "pink", "red", "purple","yellow", "grey"),
                  ylab = "Quantidade",
-                 xlab = "Status",
+                 xlab = "Mídia",
                  ylim = c(0,120),
                  main = "Uso das Redes Sociais")
   # Adicionando o texto a ser exibido 

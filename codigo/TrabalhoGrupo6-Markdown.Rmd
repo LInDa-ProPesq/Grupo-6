@@ -292,13 +292,52 @@ dev.off()
   
 # Opiniao sobre uso das midias sociais no ensino
 
+  Das redes sociais apresentadas, segue a representação gráfica em percentual do uso, indicando que a rede WhatsApp é utilizada por todos os participantes, seguido pelo facebook, youtube e instagram.
+  
+``` {r, grafico6, echo=TRUE}
+
+  redes_sociais <- c(
+    sum(ep$facebook == '1'),
+    sum(ep$twitter == '1'),
+    sum(ep$whatsapp == '1'),
+    sum(ep$linkedin == '1'),
+    sum(ep$youtube == '1'),
+    sum(ep$instagram == '1'),
+    sum(ep$snapchat == '1'),
+    sum(ep$tumblr == '1'),
+    sum(ep$pinterest == '1')
+  )
+  redes_sociais
+ 
+  #png(filename="graficos/RedesSociais", width = 800, height = 500, pointsize = 16)
+  
+  # Definindo a cor de fundo do gráfico
+  par(bg = "bisque")
+  
+  # Geração do gráfico tipo barra (barplot)
+  my_bar=barplot(redes_sociais, border=F, names.arg = NA, las=2,
+                 col = c("deepskyblue", "orange","darkviolet", "green3", "pink", "red", "purple","yellow", "grey"),
+                 ylab = "Quantidade",
+                 xlab = "Status",
+                 ylim = c(0,120),
+                 main = "Uso das Redes Sociais")
+  # Adicionando o texto a ser exibido 
+  text(my_bar, redes_sociais+4, paste("n = ",redes_sociais,sep=""),cex=1) 
+  
+  #Agora adicionando a legenda ao gráfico
+  legend("topleft", legend = c("facebook", "twitter", "whatsapp", "linkedin", "youtube", "instagram", "snapchat", "tumblr", "pinterest"),
+         col = c("deepskyblue", "orange","darkviolet", "green3", "pink", "red", "purple","yellow", "grey"),
+         bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
+         horiz = FALSE, inset = c(0.05, 0.05))
+``` 
+
   Nesta pesquisa, foram levantados dados sobre o uso das redes sociais como uma ferramenta que pode ser usada pelos professores da universidade, 62.3%  declaram que as redes devem ser utilizadas como ferramenta dos professores entretanto, 1.6% dizem que nao deveria ser utilizada como auxilio do professor, 31.1% dos entrevistados declaram que sim porem com restrições e por fim 4.9% disseram não haver uma opnião formada sobre o assunto discutido.
   
 ### 1. Não
 ### 2. Sim
 ### 3. Sim, porem com restrições
 ### 4. Não tenho opnião
-``` {r, grafico6, echo=TRUE}
+``` {r, grafico7, echo=TRUE}
 academico=table(df$usoacademico)
 academico
 
@@ -324,7 +363,7 @@ dev.off()
 ### 1. Não
 ### 2. Sim
 ### 4. Não sei/Não tenho opnião
-``` {r, grafico7, echo=TRUE}
+``` {r, grafico8, echo=TRUE}
 prof=table(df$profchegaal)
 prof
 

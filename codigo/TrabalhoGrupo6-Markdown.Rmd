@@ -195,7 +195,7 @@ dev.off()
 ```
   Apos análise grafica temos que 42,6% dos participantes pertenciam à faixa etária entre 16 e 20 anos, 52,5% na faixa etária entre 21 e 25 anos e 4,9% na faixa etária entre 26 e 30 anos. A faixa etária dos participantes tem grande impacto para a pesquisa pois é composta da proxima geração ingressante no Ensino Superior etambém daqueles que a estão cursando neste momento. As mídias sociais estão presentes na vida dos estudantes do ensino superior e alguns estudos apontaram que grande parte destes estudantes usam as mídias sociais para interação com outros usuários e para construção de relacionamentos.
   
-  ##Situacao Trabalhista
+##Situacao Trabalhista
   A seguir dados sobre situação trabalista dos participantes:
 
 ``` {r, grafico3, echo=TRUE}
@@ -230,8 +230,10 @@ legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integra
 
 dev.off()
 ``` 
+    A situação de trabalho pode levar o indivíduo a passar mais tempo nas redes sociais, ou atém em uma rede social específica, em busca de emprego por exemplo. O mesmo pode acontecer para estagiários ou trabalhadores de período parcial.
 
- Também foi levantado o estado civil dos participantes, onde apenas 1.6% dos participantes se declararam casados, e os outros 98.4% como solteiros. 
+    Também foi levantado o estado civil dos participantes, onde apenas 1.6% dos participantes se declararam casados, e os outros 98.4% como solteiros.
+    
 ## Estado Civil
 ### Dicionário de dados
 ### 1. Solteiro (a)
@@ -343,3 +345,10 @@ pie(prof, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "p
 dev.off()
 
 ```
+
+
+# Conclusão
+
+    Com as informações apresentadas, concluímos que há sim diversos fatores que podem influenciar no uso das mídias sociais pelos discentes, tanto por fatores pessoais como idade, se possui filhos, estado civil, entre outros, como por fatores sociais como a busca por recolocação no mercado de trabalho. 
+    Uma pequena minoria se mostrou totalmente contra o uso das redes sociais como ferramenta pelos professores, mostrando uma abertura para essa abordagem ser explorada. Porém uma porcentagem maior se mostrou contra a aproximação dos professores  pela rede social, podendo demonstrar que preferem um tratamento mais formal entre as partes.
+    

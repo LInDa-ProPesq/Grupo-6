@@ -246,7 +246,7 @@ pie(academico, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet
 
 dev.off()
 
-Foram adquiridos também dados referentes à opnião dos participantes sobre a utilização das mídias sociais como forma de os professores se aproximarem de seus alunos. 
+Foram adquiridos também dados referentes à opnião dos participantes sobre a utilização das mídias sociais como forma de os professores se aproximarem de seus alunos. O resultado, como visto no gráfico a seguir, demonstra que 37.7% dos participantes concordam em utilizar as redes sociais como uma forma de os professores se paroximarem de seus alunos, 36.1% não concordam e 26.2% não possuem opinião a respeito dessa questão.
 
 ### 1. Nao
 ### 2. Sim

@@ -292,7 +292,8 @@ dev.off()
   
 # Opiniao sobre uso das midias sociais no ensino
 
-  Das redes sociais apresentadas, segue a representação gráfica em percentual do uso:
+  Das redes sociais apresentadas, segue a representação gráfica em percentual do uso, indicando que a rede WhatsApp é utilizada por todos os participantes, seguido pelo facebook, youtube e instagram.
+  
 ``` {r, grafico6, echo=TRUE}
 
   redes_sociais <- c(
@@ -336,7 +337,7 @@ dev.off()
 ### 2. Sim
 ### 3. Sim, porem com restrições
 ### 4. Não tenho opnião
-``` {r, grafico6, echo=TRUE}
+``` {r, grafico7, echo=TRUE}
 academico=table(df$usoacademico)
 academico
 
@@ -362,7 +363,7 @@ Foram adquiridos também dados referentes à opnião dos participantes sobre a u
 ### 1. Não
 ### 2. Sim
 ### 4. Não sei/Não tenho opnião
-``` {r, grafico7, echo=TRUE}
+``` {r, grafico8, echo=TRUE}
 prof=table(df$profchegaal)
 prof
 

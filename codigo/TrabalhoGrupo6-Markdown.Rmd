@@ -26,16 +26,18 @@ df <- read_xlsx("C:/Grupo-6/dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados
 ## Fundamentacao Teorica
 
 ### R
-  Desenvolvido pelos estat?sticos Ross Ihaka e Robert Gentleman na d?cada de 90, o R ? considerado  uma linguagem e tamb?m um ambiente utilizado para desenvolver an?lises estat?sticas, e produzir gr?ficos. IBPAD (2017) relata que o software R fornece uma grande variedade de an?lises como : "modelagem linear e n?o-linear, testes estat?sticos cl?ssicos, an?lise de s?ries temporais, classifica??o, agrupamento, entre outros".
+  Desenvolvido pelos estatísticos Ross Ihaka e Robert Gentleman na década de 90, o R é considerado  uma linguagem e também um ambiente utilizado para desenvolver análises estatísticas, e produzir gráficos. IBPAD (2017) relata que o software R fornece uma grande variedade de análises como : “modelagem linear e não-linear, testes estatísticos clássicos, análise de séries temporais, classificação, agrupamento, entre outros”.
 
- O software se destaca por uma ampla possibilidade de codifica??o de c?lculos, matrizes, e fun??es, al?m disso, possui um extenso mecanismo para armazenar os dados que ser?o filtrados pelo programador atrav?s da ferramenta. O programa pode ser utilizado para coletar, armazenar e analisar dados de diferentes ?reas, ? poss?vel criar gr?ficos com dados estat?sticos por exemplo do painel eleitoral do nosso pa?s, ou at? mesmo a cria??o de mapas financeiros utilizando gr?ficos de pizza, barras entre outros (IBPAD, 2017).
+ O software se destaca por uma ampla possibilidade de codificação de cálculos, matrizes, e funções, além disso, possui um extenso mecanismo para armazenar os dados que serão filtrados pelo programador através da ferramenta. O programa pode ser utilizado para coletar, armazenar e analisar dados de diferentes áreas, é possível criar gráficos com dados estatísticos por exemplo do painel eleitoral do nosso país, ou até mesmo a criação de mapas financeiros utilizando gráficos de pizza, barras entre outros (IBPAD, 2017).
 
-  Uma de suas vantagem ? o fato de ser um software de c?digo aberto(open source), ou seja, possibilita que qualquer pessoa possa utiliz?-lo, al?m disso este programa vem ganhando destaque entre pesquisadores, engenheiros e profissionais do ramo estat?stico, tamb?m cont?m diversos pacotes que incrementam as suas funcionalidades, fazendo com que cres?a cada vez mais, ? poss?vel fazer seu download em diferentes plataformas como : windows, linux e mac.
+Uma de suas vantagem é o fato de ser um software de código aberto(open source), ou seja, possibilita que qualquer pessoa possa utilizá-lo, além disso este programa vem ganhando destaque entre pesquisadores, engenheiros e profissionais do ramo estatístico, também contém diversos pacotes que incrementam as suas funcionalidades, fazendo com que cresça cada vez mais, é possível fazer seu download em diferentes plataformas como : Windows, Linux e Mac
 
 
 ### R Markdown
   R Markdown foi projetado com o intuito de facilitar a reprodutibilidade, já que tanto o código de computação quanto as narrativas (parte textual) estão no mesmo documento, no qual os resultados são gerados automaticamente a partir do código-fonte. 
+  
   A maneira usual de compilar um documento R Markdown é clicar no botão “Knit” sendo o atalho de teclado correspondente é Ctrl + Shift + K, após clicar na opção o RStudio chama a função rmarkdown :: render () para renderizar o documento em uma nova sessão R, a reprodutibilidade é a principal razão pela qual o RStudio usa uma nova  sessão do R para renderizar seus documentos Rmd: na maioria dos casos, o usuário quer que seus documentos continuem a funcionar da próxima vez que for utilizar o R em ambientes de computação de outras pessoas.
+  
   Existem dois tipos de formatos de saída no pacote rmarkdown: documentos e apresentações. Todos os formatos disponíveis estão listados abaixo:
 
 Apresentação beamer
@@ -54,58 +56,74 @@ Documento RTF
 ### Github
 
   Git é um sistema de controle de versões distribuído que foi criado por Linus Torvalds em 2005. Um sistema de controle de versões pode ser definido como um software que mantém um registro com as alterações realizadas em determinado projeto ou arquivo ao longo do tempo. Por ser distribuído, todos os integrantes de um projeto possuem acesso a todo o histórico de versões deste e não apenas de seu estado atual. A ideia de sua criação surgiu quando Torvalds e os demais desenvolvedores do kernel Linux decidiram não utilizar mais o software controlador de versões BitKeeper após o detentor dos direitos autorais deste, Larry Macvoy, remover o acesso gratuito à ferramenta. 
+  
   Como Torvalds desejava uma ferramenta semelhante ao BitKeeper para auxiliar no desenvolvimento do kernel do Linux, decidiu desenvolver seu próprio sistema controlador de versões, criando, assim, o Git. Por conta de sua velocidade e praticidade, o Git obteve sucesso e conseguiu diversos usuários pelo mundo.
+  
   O GitHub é um site que permite a seus usuários a hospedagem de uma cópia de repositórios Git. Além disso, ele também possibilita a colaboração de integrantes de um grupo para desenvolver um projeto por possuir um local centralizado para compartilhar um repositório, interface web para visualizá-lo e também recursos como forking, pull, requests, issues e wikis que permite discussões, revisões e alterações no projeto junto à equipe de forma eficiente.
 
 ## UNESP
 
-3 CAP. III - UNESP
+	A Universidade Estadual Paulista possui atualmente matriculados 37.997 alunos de graduação, 13.998 alunos de pòs graduação, 7.392 alunos de mestrado e 6.606 alunos de doutorado. Além disso, possui um número de 3.389 docentes. Dados estes sendo do Anuário Estatístico da Unesp do ano de 2017. O campus surgiu em 15 de agosto de 1988, após a Unesp incorporar a UB (universidade de Bauru) com a seguinte estrutura: 03 Unidades Universitárias que oferecem Cursos de Graduação, Pós-Graduação, Mestrado/Doutorado, Cursos de Especialização, e 01 Unidade Administrativa. As 03 unidades universitárias são: a Faculdade de arquitetura, artes e comunicação (FAAC), a Faculdade de ciências (FC) e a Faculdade de Engenharia de Bauru (FEB), além da Administração geral (AG).
 
-	A Universidade Estadual Paulista possui atualmente matriculados 37.997 alunos de graduação, 13.998 alunos de p?s gradua??o, 7.392 alunos de mestrado e 6.606 alunos de doutorado. Al?m disso, possui um n?mero de 3.389 docentes. Dados estes sendo do Anu?rio Estat?stico da Unesp do ano de 2017. O campus surgiu em 15 de agosto de 1988, ap?s a Unesp incorporar a UB (universidade de Bauru) com a seguinte estrutura: 03 Unidades Universit?rias que oferecem Cursos de Gradua??o, P?s-Gradua??o, Mestrado/Doutorado, Cursos de Especializa??o, e 01 Unidade Administrativa. As 03 unidades universit?rias s?o: a Faculdade de arquitetura, artes e comunica??o (FAAC), a Faculdade de ci?ncias (FC) e a Faculdade de Engenharia de Bauru (FEB), al?m da Administra??o geral (AG).
+## Faculdade de Ciências
+  A Faculdade de Ciências, Unidade Universitária da UNESP, parte integrante do campus de Bauru, nasceu com a Fundação Educacional de Bauru (FEB), entidade de direito público, sem fins lucrativos, criada pela Lei Municipal n° 1.276, de 26/12/66, tendo seu Estatuto sido aprovado pelo Decreto Municipal n° 1.932, de 09/07/73.
+  
+  A autorização para instalação da Faculdade de Ciências, com os cursos de Física, Matemática, Desenho, Ciências e Psicologia deu-se em 18/11/1968, através da Resolução n° 30/68 do Conselho Estadual de Educação. Em 1969, a Secretaria de Educação, através do Ato 46 de 28/02/1969, o Conselho Estadual de Educação através da Resolução 05/69 de 28/02/1969 e o Governo do Estado, através do Decreto n° 51.578 de 21/03/1969, autorizam o funcionamento da Faculdade de Ciências da Fundação Educacional de Bauru. Portanto em 28/02/2017, a Faculdade de Ciências completou 48 anos de existência.
+  
+  Funcionando originariamente em prédio da Secretaria Estadual de Educação, na Vila Falcão, a Fundação Educacional de Bauru recebeu, por doação da Prefeitura Municipal de Bauru, a área de 4.800.000m² (200 alqueires paulistas), localizada no Bairro de Vargem Limpa. Em 16/08/85, através do Decreto Municipal n° 4.497 e Parecer do Conselho Estadual de Educação n° 951, de 02/07/85, as Faculdades de Ciências, Engenharia e Tecnologia, mantidas pela Fundação Educacional de Bauru, foram transformadas em Universidade de Bauru, reconhecida em 04/11/86, pelo Ministério da Educação, através da Portaria n° 774.
+  
+  Em 15/08/88, após aprovação pelo Conselho Universitário da UNESP, o Governo de Estado, através do decreto n° 28.682, incorporava a Universidade de Bauru à Universidade Estadual Paulista "Júlio de Mesquita Filho", com a seguinte estrutura acadêmica: Faculdade de Arquitetura, Artes e Comunicação, Faculdade de Ciências e Faculdade de Engenharia e Tecnologia.
+  
+O Centro de Psicologia Aplicada (CPA), Unidade Auxiliar, pertencente à Faculdade de Ciências da UNESP, Campus de Bauru, iniciou suas atividades em 1973, na então Fundação Educacional de Bauru (FEB), com o objetivo de reunir e coordenar as atividades de estágio obrigatórias para os alunos do Curso de Formação de Psicólogos, do Departamento de Psicologia.
 
-3.1 Faculdade de Ci?ncias
+  A incorporação pela UNESP, exigiu que a Faculdade de Ciências reavaliasse seus objetivos e estrutura. A pesquisa e extensão ganharam maior importância em relação ao período anterior e os docentes ainda não titulados em nível de pós-graduação, tiveram que buscar estes títulos em outras Instituições. Assim, houve um salto de 5% dos docentes com título de doutor em 1988, para 84% doutores em 2004, valor igual a média da UNESP. Como conseqüência, observou-se um rápido crescimento, não só nas atividades de ensino e extensão, mas também, na quantidade e qualidade das atividades de pesquisa.
+  
+  Atualmente conta com mais de 2.300 alunos de Graduação matriculados em 10 cursos de graduação, que possibilitam 13 opções de ingresso no Vestibular Vunesp: Ciência da Computação (Bac) - período integral, Ciências Biológicas (Bac/Lic) - períodos integral e noturno, Educação Física (Bac/Lic) - períodos integral e noturno, Física (Bac/Lic) - período vespertino/noturno, Matemática (Lic) - período noturno, Meteorologia (Bac) - período integral, Pedagogia (Lic) - período noturno, Psicologia (Bac) - períodos integral e noturno, Química (Bac/Lic) - período vespertino/noturno e Sistemas de Informação (Bac) - período noturno.
+  A Unidade oferece 7 programas de Pós-Graduação "stricto sensu", com aproximadamente 500 alunos matriculados nos cursos: Ciência da Computação (Interunidades), Ciência e Tecnologia de Materiais (Interunidades), Ciências da Motricidade (Interunidades), Docência para a Educação Básica, Educação para a Ciência, Matemática em Rede Nacional (Interunidades) e Psicologia do Desenvolvimento e Aprendizagem.
+  
+  Para o desenvolvimento de suas atividades conta atualmente com 190 servidores docentes distribuídos nos Departamentos de Educação, Educação Física, Computação, Ciências Biológicas, Química, Física, Matemática e Psicologia e 150 servidores técnico-administrativos ativos.
+Com uma infraestrutura em expansão, dispõe de 20 laboratórios didáticos, 46 laboratórios de Pesquisa e 04 laboratórios Didáticos de Informática.
+
+  Através da extensão a Faculdade de Ciências realiza um processo educativo, cultural e científico, articulando ensino e pesquisa de forma indissociável e viabiliza a relação transformadora entre Universidade e Sociedade. A grande diversidade nesta forma de retorno que a Universidade dá a Sociedade, principalmente àquela do entorno da Faculdade de Ciências.
+  
+### Faculdade de Engenharia
+
+A Faculdade de Engenharia de Bauru - FE é uma das 35 Unidades Universitárias que compõem a Universidade Estadual Paulista “Júlio de Mesquita Filho” - UNESP, uma das três universidades públicas do Estado de São Paulo.
+	
+A FE foi autorizada a funcionar em 1967, de acordo com decreto do Governador do Estado nº 47.893, de 12/04/67, e Portaria nº 7/67 do Conselho Estadual de Educação. Neste ano, entrou em atividade o curso de Graduação em Engenharia Mecânica e, no ano seguinte, os cursos de Graduação em Engenharia Civil e Engenharia Elétrica, os quais eram mantidos pela Fundação Educacional de Bauru, entidade jurídica sem fins lucrativos, criada pela Lei Municipal nº 1276, de 26/12/66. Os cursos de Engenharia Civil e Engenharia Mecânica foram reconhecidos em 1972, através do Decreto nº 70.596, da Presidência da República, e o curso de Engenharia Elétrica teve seu reconhecimento em 1975, com o Decreto nº 78.846. Nos anos posteriores, foram criados outros cursos e unidades, mantidos pela Fundação Educacional de Bauru. Em 1985, foi instalada a Universidade de Bauru, composta pelas Faculdades de Engenharia, Tecnologia, Ciências e Artes e Comunicações. 
+	
+Em agosto de 1988, conforme já relatado, a Universidade de Bauru foi incorporada à UNESP e os cursos de Engenharia e Tecnologia foram agrupados numa única Unidade, chamada Faculdade de Engenharia e Tecnologia. Com a extinção dos cursos de Tecnologia, a Unidade passou a chamar-se Faculdade de Engenharia.
  
-A Faculdade de Ci?ncias, Unidade Universit?ria da UNESP, parte integrante do campus de Bauru, nasceu com a Funda??o Educacional de Bauru (FEB), entidade de direito p?blico, sem fins lucrativos, criada pela Lei Municipal n? 1.276, de 26/12/66, tendo seu Estatuto sido aprovado pelo Decreto Municipal n? 1.932, de 09/07/73.
-A autoriza??o para instala??o da Faculdade de Ci?ncias, com os cursos de F?sica, Matem?tica, Desenho, Ci?ncias e Psicologia deu-se em 18/11/1968, atrav?s da Resolu??o n? 30/68 do Conselho Estadual de Educa??o. Em 1969, a Secretaria de Educa??o, atrav?s do Ato 46 de 28/02/1969, o Conselho Estadual de Educa??o atrav?s da Resolu??o 05/69 de 28/02/1969 e o Governo do Estado, atrav?s do Decreto n? 51.578 de 21/03/1969, autorizam o funcionamento da Faculdade de Ci?ncias da Funda??o Educacional de Bauru. Portanto em 28/02/2017, a Faculdade de Ci?ncias completou 48 anos de exist?ncia.
-Funcionando originariamente em pr?dio da Secretaria Estadual de Educa??o, na Vila Falc?o, a Funda??o Educacional de Bauru recebeu, por doa??o da Prefeitura Municipal de Bauru, a ?rea de 4.800.000m? (200 alqueires paulistas), localizada no Bairro de Vargem Limpa. Em 16/08/85, atrav?s do Decreto Municipal n? 4.497 e Parecer do Conselho Estadual de Educa??o n? 951, de 02/07/85, as Faculdades de Ci?ncias, Engenharia e Tecnologia, mantidas pela Funda??o Educacional de Bauru, foram transformadas em Universidade de Bauru, reconhecida em 04/11/86, pelo Minist?rio da Educa??o, atrav?s da Portaria n? 774.
-Em 15/08/88, ap?s aprova??o pelo Conselho Universit?rio da UNESP, o Governo de Estado, atrav?s do decreto n? 28.682, incorporava a Universidade de Bauru ? Universidade Estadual Paulista "J?lio de Mesquita Filho", com a seguinte estrutura acad?mica: Faculdade de Arquitetura, Artes e Comunica??o, Faculdade de Ci?ncias e Faculdade de Engenharia e Tecnologia.
-O Centro de Psicologia Aplicada (CPA), Unidade Auxiliar, pertencente ? Faculdade de Ci?ncias da UNESP, Campus de Bauru, iniciou suas atividades em 1973, na ent?o Funda??o Educacional de Bauru (FEB), com o objetivo de reunir e coordenar as atividades de est?gio obrigat?rias para os alunos do Curso de Forma??o de Psic?logos, do Departamento de Psicologia.
-A incorpora??o pela UNESP, exigiu que a Faculdade de Ci?ncias reavaliasse seus objetivos e estrutura. A pesquisa e extens?o ganharam maior import?ncia em rela??o ao per?odo anterior e os docentes ainda n?o titulados em n?vel de p?s-gradua??o, tiveram que buscar estes t?tulos em outras Institui??es. Assim, houve um salto de 5% dos docentes com t?tulo de doutor em 1988, para 84% doutores em 2004, valor igual a m?dia da UNESP. Como conseq??ncia, observou-se um r?pido crescimento, n?o s? nas atividades de ensino e extens?o, mas tamb?m, na quantidade e qualidade das atividades de pesquisa.
-Atualmente conta com mais de 2.300 alunos de Gradua??o matriculados em 10 cursos de gradua??o, que possibilitam 13 op??es de ingresso no Vestibular Vunesp: Ci?ncia da Computa??o (Bac) - per?odo integral, Ci?ncias Biol?gicas (Bac/Lic) - per?odos integral e noturno, Educa??o F?sica (Bac/Lic) - per?odos integral e noturno, F?sica (Bac/Lic) - per?odo vespertino/noturno, Matem?tica (Lic) - per?odo noturno, Meteorologia (Bac) - per?odo integral, Pedagogia (Lic) - per?odo noturno, Psicologia (Bac) - per?odos integral e noturno, Qu?mica (Bac/Lic) - per?odo vespertino/noturno e Sistemas de Informa??o (Bac) - per?odo noturno.
-A Unidade oferece 7 programas de P?s-Gradua??o "stricto sensu", com aproximadamente 500 alunos matriculados nos cursos: Ci?ncia da Computa??o (Interunidades), Ci?ncia e Tecnologia de Materiais (Interunidades), Ci?ncias da Motricidade (Interunidades), Doc?ncia para a Educa??o B?sica, Educa??o para a Ci?ncia, Matem?tica em Rede Nacional (Interunidades) e Psicologia do Desenvolvimento e Aprendizagem.
-Para o desenvolvimento de suas atividades conta atualmente com 190 servidores docentes distribu?dos nos Departamentos de Educa??o, Educa??o F?sica, Computa??o, Ci?ncias Biol?gicas, Qu?mica, F?sica, Matem?tica e Psicologia e 150 servidores t?cnico-administrativos ativos.
-Com uma infraestrutura em expans?o, disp?e de 20 laborat?rios did?ticos, 46 laborat?rios de Pesquisa e 04 laborat?rios Did?ticos de Inform?tica.
-Atrav?s da extens?o a Faculdade de Ci?ncias realiza um processo educativo, cultural e cient?fico, articulando ensino e pesquisa de forma indissoci?vel e viabiliza a rela??o transformadora entre Universidade e Sociedade. A grande diversidade nesta forma de retorno que a Universidade d? a Sociedade, principalmente ?quela do entorno da Faculdade de Ci?ncias.
 
-3.2 Faculdade de Engenharia
-
-	A Faculdade de Engenharia de Bauru - FE ? uma das 35 Unidades Universit?rias que comp?em a Universidade Estadual Paulista "J?lio de Mesquita Filho" - UNESP, uma das tr?s universidades p?blicas do Estado de S?o Paulo.
-	A FE foi autorizada a funcionar em 1967, de acordo com decreto do Governador do Estado n? 47.893, de 12/04/67, e Portaria n? 7/67 do Conselho Estadual de Educa??o. Neste ano, entrou em atividade o curso de Gradua??o em Engenharia Mec?nica e, no ano seguinte, os cursos de Gradua??o em Engenharia Civil e Engenharia El?trica, os quais eram mantidos pela Funda??o Educacional de Bauru, entidade jur?dica sem fins lucrativos, criada pela Lei Municipal n? 1276, de 26/12/66. Os cursos de Engenharia Civil e Engenharia Mec?nica foram reconhecidos em 1972, atrav?s do Decreto n? 70.596, da Presid?ncia da Rep?blica, e o curso de Engenharia El?trica teve seu reconhecimento em 1975, com o Decreto n? 78.846. Nos anos posteriores, foram criados outros cursos e unidades, mantidos pela Funda??o Educacional de Bauru. Em 1985, foi instalada a Universidade de Bauru, composta pelas Faculdades de Engenharia, Tecnologia, Ci?ncias e Artes e Comunica??es. 
-	Em agosto de 1988, conforme j? relatado, a Universidade de Bauru foi incorporada ? UNESP e os cursos de Engenharia e Tecnologia foram agrupados numa ?nica Unidade, chamada Faculdade de Engenharia e Tecnologia. Com a extin??o dos cursos de Tecnologia, a Unidade passou a chamar-se Faculdade de Engenharia.
-
- 
-
-	Atualmente a FE oferece os seguintes cursos de gradua??o:
+	Atualmente a FE oferece os seguintes cursos de graduação:
 
 	* Engenharia Civil
-	* Engenharia El?trica
-	* Engenharia Mec?nica
-	* Engenharia de Produ??o
+	* Engenharia Elétrica
+	* Engenharia Mecânica
+	* Engenharia de Produção
 
-	A estrutura curricular vigente dos cursos de gradua??o da Faculdade de Engenharia da UNESP, Campus de Bauru, foi implantada, atrav?s de Resolu??es da UNESP, aprovadas em abril de 1991. A partir de ent?o, t?m sido feitas constantes atualiza??es dos planos de ensino das disciplinas, visando o bom desenvolvimento dos cursos. Em 2006 foi implantada a nova estrutura curricular, tamb?m atrav?s de Resolu??es.  Al?m disso, foram criados diversos mecanismos de incentivo ao desenvolvimento de atividades extracurriculares para os alunos, procurando-se, assim, o enriquecimento dos projetos pedag?gicos e, conseq?entemente, a melhoria na forma??o dos profissionais. 
-	Todos os anos ingressam atrav?s de vestibular, 60 novos alunos nos cursos de Engenharia Civil, El?trica e Mec?nica e 40 novos alunos no curso de Engenharia de Produ??o, existindo atualmente, um total de 1279 alunos matriculados nos quatro cursos.
+	A estrutura curricular vigente dos cursos de graduação da Faculdade de Engenharia da UNESP, Campus de Bauru, foi implantada, através de Resoluções da UNESP, aprovadas em abril de 1991. A partir de então, têm sido feitas constantes atualizações dos planos de ensino das disciplinas, visando o bom desenvolvimento dos cursos. Em 2006 foi implantada a nova estrutura curricular, também através de Resoluções.  Além disso, foram criados diversos mecanismos de incentivo ao desenvolvimento de atividades extracurriculares para os alunos, procurando-se, assim, o enriquecimento dos projetos pedagógicos e, conseqüentemente, a melhoria na formação dos profissionais. 
+	
+	Todos os anos ingressam através de vestibular, 60 novos alunos nos cursos de Engenharia Civil, Elétrica e Mecânica e 40 novos alunos no curso de Engenharia de Produção, existindo atualmente, um total de 1279 alunos matriculados nos quatro cursos.
 
-3.3 Faculdade de Arquitetura, Artes e Comunica??o
 
-O curso de Desenho e Pl?stica, mantido inicialmente pela Faculdade de Ci?ncias, como visto anteriormente, iniciou-se em 1969 e foi mantido at? o ano de 1973.
-	No ano de 1974, teve in?cio os cursos de Comunica??o Social, Educa??o Art?stica e Artes Pl?sticas Habilita??o em Artes Industriais, sendo este ?ltimo mantido at? o ano de 1976.
-	No ano de 1975, instalou-se as Habilita??es em Artes Pl?sticas, e Desenho do Curso de Educa??o Art?stica, sendo que a Habilita??o em Desenho foi mantida at? o ano de 1976. Al?m disso foram instalados neste mesmo ano os cursos de bacharelado em Desenho Industrial e Comunica??o Visual.
-	O curso de Comunica??o Social foi autorizado a converter-se em curso de Comunica??o Social - Habilita??o em Rela??es P?blicas, conforme Portaria MEC no. 031 de 12 de janeiro de 1981, sendo que a primeira turma teve in?cio no ano de 1982.
-	Em 1984 teve in?cio o curso de Arquitetura e Urbanismo. Em 1985, teve in?cio a Habilita??o em Jornalismo do curso de Comunica??o Social.
-	Todos os cursos citados anteriormente faziam parte da estrutura acad?mica da Faculdade de Artes e Comunica??es da Funda??o Educacional de Bauru, exceto o curso de Desenho e Pl?stica que foi iniciado pela Faculdade de Ci?ncias.
-	No ano de 1988, j? Universidade de Bauru, come?ou a vigorar as Habilita??es em Projeto de Produto e Programa??o Visual, conforme Resolu??o CFE no. 02 de 16 de junho de 1987, antes denominados cursos de Desenho Industrial e Comunica??o Visual, respectivamente.
-No ano de 1989, instalou-se a Habilita??o em Radialismo (R?dio e TV), no curso de Comunica??o Social.
+### Faculdade de Arquitetura, Artes e Comunicação
 
+O curso de Desenho e Plástica, mantido inicialmente pela Faculdade de Ciências, como visto anteriormente, iniciou-se em 1969 e foi mantido até o ano de 1973.
+  
+No ano de 1974, teve início os cursos de Comunicação Social, Educação Artística e Artes Plásticas Habilitação em Artes Industriais, sendo este último mantido até o ano de 1976.
+	
+No ano de 1975, instalou-se as Habilitações em Artes Plásticas, e Desenho do Curso de Educação Artística, sendo que a Habilitação em Desenho foi mantida até o ano de 1976. Além disso foram instalados neste mesmo ano os cursos de bacharelado em Desenho Industrial e Comunicação Visual.
+	
+O curso de Comunicação Social foi autorizado a converter-se em curso de Comunicação Social - Habilitação em Relações Públicas, conforme Portaria MEC no. 031 de 12 de janeiro de 1981, sendo que a primeira turma teve início no ano de 1982.
+	
+Em 1984 teve início o curso de Arquitetura e Urbanismo. Em 1985, teve início a Habilitação em Jornalismo do curso de Comunicação Social.
+	
+Todos os cursos citados anteriormente faziam parte da estrutura acadêmica da Faculdade de Artes e Comunicaçòes da Fundação Educacional de Bauru, exceto o curso de Desenho e Plástica que foi iniciado pela Faculdade de Ciências.
+	
+No ano de 1988, já Universidade de Bauru, começou a vigorar as Habilitações em Projeto de Produto e Programação Visual, conforme Resolução CFE no. 02 de 16 de junho de 1987, antes denominados cursos de Desenho Industrial e Comunicação Visual, respectivamente.
+No ano de 1989, instalou-se a Habilitação em Radialismo (Rádio e TV), no curso de Comunicação Social.
+  
 
 ##Dados Censitarios
   Na pesquisa realizada tivemos a participação da seguinte proporção de público feminino e masculino:
@@ -114,7 +132,7 @@ No ano de 1989, instalou-se a Habilita??o em Radialismo (R?dio e TV), no curso d
 ### 2.Masculino e 
 ### 3.Feminino
 
-``` {r, genero, echo=TRUE}
+``` {r, grafico1, echo=TRUE}
 sexo=table(df$genero)
 sexo
 
@@ -143,7 +161,7 @@ dev.off()
 ### 4. Entre 30 e 35 anos
 ### 5. Entre 36 e 40 anos
 ### 6. Acima de 40 anos
-
+``` {r, grafico2, echo=TRUE}
 idade=table(df$idade)
 idade
 rotulos <- c("Entre 16 e 20 anos", "Entre 21 e 25 anos", "Entre 26 e 30 anos", 
@@ -151,7 +169,7 @@ rotulos <- c("Entre 16 e 20 anos", "Entre 21 e 25 anos", "Entre 26 e 30 anos",
 porc_Idade <- round(idade/sum(idade)*100, digits=1)
 porc_Idade
 
-png(filename="graficos/Idade.png", width = 800, height = 500, pointsize = 16)
+#png(filename="graficos/Idade.png", width = 800, height = 500, pointsize = 16)
 
 
 par(bg = "bisque")
@@ -174,19 +192,20 @@ legend("topleft", legend = c("Entre 16 e 20 anos", "Entre 21 e 25 anos", "Entre 
        horiz = FALSE, inset = c(0.05, 0.05))
 
 dev.off()
-
+```
   Apos análise grafica temos que 42,6% dos participantes pertenciam à faixa etária entre 16 e 20 anos, 52,5% na faixa etária entre 21 e 25 anos e 4,9% na faixa etária entre 26 e 30 anos. A faixa etária dos participantes tem grande impacto para a pesquisa pois é composta da proxima geração ingressante no Ensino Superior etambém daqueles que a estão cursando neste momento. As mídias sociais estão presentes na vida dos estudantes do ensino superior e alguns estudos apontaram que grande parte destes estudantes usam as mídias sociais para interação com outros usuários e para construção de relacionamentos.
   
   ##Situacao Trabalhista
-  A seguir dados sobre situa??o trabalista dos participantes:
-  
+  A seguir dados sobre situação trabalista dos participantes:
+
+``` {r, grafico3, echo=TRUE}
 trabalha=table(df$trabalha)
 trabalha
 rot <- c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi?rio",
              "Trabalha por conta pr?pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes")
 porc_Trabalha <- round(trabalha/sum(trabalha)*100, digits=1)
 porc_Trabalha
-png(filename="graficos/Trabalha.png", width = 800, height = 500, pointsize = 16)
+#png(filename="graficos/Trabalha.png", width = 800, height = 500, pointsize = 16)
 
 # Definindo a cor de fundo do gráfico
 par(bg = "bisque")
@@ -202,7 +221,7 @@ my_bar=barplot(trabalha, border=F, names.arg = NA, las=2,
 text(my_bar, trabalha+4, paste("n = ",trabalha,sep=""),cex=1) 
 
 #Agora adicionando a legenda ao gráfico
-legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi?rio",
+legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integral", "Estagiário",
         "Trabalha por conta pr?pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes"),
        col = c("green","deepskyblue", "yellow", "red","purple", "pink", "red","blue"),
        bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
@@ -210,7 +229,7 @@ legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integra
 
 
 dev.off()
-  
+``` 
 
  Também foi levantado o estado civil dos participantes, onde apenas 1.6% dos participantes se declararam casados, e os outros 98.4% como solteiros. 
 ## Estado Civil
@@ -221,6 +240,8 @@ dev.off()
 ### 4. Viúvo (a)
 ### 5. Separado (a)
 ### 6. Prefiro não declarar
+
+``` {r, grafico4, echo=TRUE}
 estadocivil=table(df$estadocivil)
 estadocivil
 
@@ -231,28 +252,28 @@ pct
 
 lbls <- paste0(pct,"% ", lbls) # add percents to labels
 lbls
-png(filename="graficos/EstadoCivil.png", width = 800, height = 500, pointsize = 16)
+#png(filename="graficos/EstadoCivil.png", width = 800, height = 500, pointsize = 16)
 par(bg = "bisque")
 
 ### Geração do gráfico tipo pizza (pie)
 pie(estadocivil, labels = lbls, edges = 100, angle = 45, col = c("deepskyblue","darkviolet", "green3"), main = "Estado Civil dos participantes")
 
 dev.off()
-
+```
   Quanto a quantidade de filhos, 100% dos participantes declararam não ter nenhum filho, o que se mostra bem coerente com os participantes onde mais de 95% está abaixo dos 25 anos e quase 95% como solteiros. Já foi comprovado que as mulheres com maior nível de escolaridade, postergam mais seus filhos e diminuem a taxa de fecundidade, além disso, no Brasil é mais comum ter filhos após o casamento.
-  ## Dicionário de dados
+## Dicionário de dados
 ### 1. Sem filhos
 ### 2. Um filho
 ### 3. Dois filhos
 ### 4. Três filhos
 ### 5. Mais de três filhos
-
+``` {r, grafico5, echo=TRUE}
 temfilhos=table(df$filhos)
 temfilhos
 lbls <- c("Sem Filhos", "Um", "Dois", "Tres", "Mais de Três Filhos")
 porc_temfilhos <- round(temfilhos/sum(temfilhos)*100, digits=1)
 porc_temfilhos
-png(filename="graficos/TemFilhos.png", width = 800, height = 500, pointsize = 16)
+#png(filename="graficos/TemFilhos.png", width = 800, height = 500, pointsize = 16)
 par(bg = "bisque")
 
 lbls <- paste0(porc_temfilhos,"% ", lbls) # add percents to labels
@@ -264,22 +285,22 @@ pie(temfilhos, labels = lbls, edges = 100, angle = 45,
     col = c("deepskyblue","darkviolet", "green3"), main = "Quantidade de filhos dos participantes")
 
 dev.off()
-
+```
   Também foi questionado a faixa etária dos filhos, mas como nenhum participante declarou ter filhos, essa análise não foi representada gráficamente. Lembrando que não possuir filhos se mostra mais comum nessa população, o que pode influenciar no tempo que eles passam nas mídias, ou se estão solteiros quais mídias eles usam mais. Assim como se tivesse a faixa etária dos filhos declarada, poderia influenciar no tempo dedicado nas mídias dependendo da idade do filho.
   
 # Opiniao sobre uso das midias sociais no ensino
 
-    Nesta pesquisa, foram levantados dados sobre o uso das redes sociais como uma ferramenta que pode ser usada pelos professores da universidade, 62.3%  declaram que as redes devem ser utilizadas como ferramenta dos professores entretanto, 1.6% dizem que nao deveria ser utilizada como auxilio do professor, 31.1% dos entrevistados declaram que sim porem com restri??es e por fim 4.9% disseram n?o haver uma opni?o formada sobre o assunto discutido.
-    
-### 1. N?o
+  Nesta pesquisa, foram levantados dados sobre o uso das redes sociais como uma ferramenta que pode ser usada pelos professores da universidade, 62.3%  declaram que as redes devem ser utilizadas como ferramenta dos professores entretanto, 1.6% dizem que nao deveria ser utilizada como auxilio do professor, 31.1% dos entrevistados declaram que sim porem com restrições e por fim 4.9% disseram não haver uma opnião formada sobre o assunto discutido.
+  
+### 1. Não
 ### 2. Sim
-### 3. Sim, porem com restri??es
-### 4. N?o tenho opni?o
-
+### 3. Sim, porem com restrições
+### 4. Não tenho opnião
+``` {r, grafico6, echo=TRUE}
 academico=table(df$usoacademico)
 academico
 
-lbls <- c("N?o", "Sim", "Sim, com restri??o", "Sem opni?o")
+lbls <- c("Não", "Sim", "Sim, com restrição", "Sem opnião")
 
 porcentagem_academico <- round(academico/sum(academico)*100, digits=1)
 porcentagem_academico
@@ -287,7 +308,7 @@ porcentagem_academico
 
 lbls <- paste0(porcentagem_academico,"% ", lbls) # add percents to labels
 lbls
-png(filename="graficos/UsoAcademico.png", width = 800, height = 500, pointsize = 16)
+#png(filename="graficos/UsoAcademico.png", width = 800, height = 500, pointsize = 16)
 par(bg = "bisque")
 
 
@@ -295,13 +316,13 @@ par(bg = "bisque")
 pie(academico, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "blue", "pink"), main = "Midias sociais como ferramenta do professor")
 
 dev.off()
-
+```
 Foram adquiridos também dados referentes à opnião dos participantes sobre a utilização das mídias sociais como forma de os professores se aproximarem de seus alunos. O resultado, como visto no gráfico a seguir, demonstra que 37.7% dos participantes concordam em utilizar as redes sociais como uma forma de os professores se paroximarem de seus alunos, 36.1% não concordam e 26.2% não possuem opinião a respeito dessa questão.
 
-### 1. Nao
+### 1. Não
 ### 2. Sim
-### 4. Nao sei/Nao tenho opniao
-
+### 4. Não sei/Não tenho opnião
+``` {r, grafico7, echo=TRUE}
 prof=table(df$profchegaal)
 prof
 
@@ -313,7 +334,7 @@ porcentagem_prof
 lbls <- paste0(porcentagem_prof,"% ", lbls) 
 lbls
 
-png(filename="graficos/AproximacaoProfessores.png", width = 800, height = 500, pointsize = 16)
+#png(filename="graficos/AproximacaoProfessores.png", width = 800, height = 500, pointsize = 16)
 par(bg = "bisque")
 
 ### Geração do gráfico tipo pizza (pie)
@@ -321,3 +342,4 @@ pie(prof, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "p
 
 dev.off()
 
+```

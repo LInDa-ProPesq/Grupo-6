@@ -385,6 +385,41 @@ dev.off()
 
 ```
 
+  Ainda que haja opniões a favor das redes sociais no universo educacional, existem barreiras que podem atrapalhar o caminho do desenvolvimento desta ferramenta como suporte ao ensino. Na pesquisa realizada, foram coletados dados a respeito das possiveis dificuldades encontradas, é possivel notar que as distrações são o grande enfoque negativo segundo os estudantes entrevistados, logo em seguida o uso indevido pode ser considerado um outra barreira forte a essa ideia de inserção das midias nos ambientes educacionais.
+  
+``` {r, grafico9, echo=TRUE}
+principais_dificuldades <- c(
+  sum(df$distracao == '1'),
+  sum(df$usoindev == '1'),
+  sum(df$prejintera == '1'),
+  sum(df$bulling == '1'),
+  sum(df$continadeq == '1')
+)
+principais_dificuldades
+
+#png(filename="graficos/PrincipaisDistrações", width = 800, height = 500, pointsize = 16)
+
+# Definindo a cor de fundo do grÃ¡fico
+par(bg = "bisque")
+
+# GeraÃ§Ã£o do grÃ¡fico tipo barra (barplot)
+my_bar=barplot(principais_dificuldades, border=F, names.arg = NA, las=2,
+               col = c("red", "orange","yellow", "green3", "blue"),
+               ylab = "Quantidade",
+               xlab = "Dificuldades",
+               ylim = c(0,120),
+               main = "Dificuldades do uso das Redes Sociais em ambientes educacionais")
+# Adicionando o texto a ser exibido 
+text(my_bar, principais_dificuldades+4, paste("n = ",principais_dificuldades,sep=""),cex=1) 
+
+#Agora adicionando a legenda ao grÃ¡fico
+legend("topleft", legend = c("distração", "uso indevido", "prejudica a interação", "bulling", "publicação de conteudo inadequado"),
+       col = c("red", "orange","yellow", "green3", "blue"),
+       bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
+       horiz = FALSE, inset = c(0.05, 0.05))
+
+```
+
 
   Nesse estudo, foram tambem constatados dados referente  ao envio de informações do local de ensino para os pais utilizando as midias sociais. Pode-se notar que mais da metade dos alunos entrevistados acreditam que esta é uma boa(37,7%) e tambem uma excelente(23%) ação a ser tomada pelas instituições de ensino entretanto, ainda há no total 14% das pessoas que acreditam que isto não deveria ser feito, então é possivel constatar uma certa resistencia a este assunto por parte dos alunos.
 
@@ -393,7 +428,7 @@ dev.off()
 ### 3. Indiferente
 ### 4. Ruim
 ### 5. Muito ruim
-``` {r, grafico8, echo=TRUE}
+``` {r, grafico10, echo=TRUE}
 
 envioinfo=table(df$evioinfo)
 envioinfo

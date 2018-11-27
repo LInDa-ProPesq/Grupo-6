@@ -216,6 +216,34 @@ pie(temfilhos, labels = lbls, edges = 100, angle = 45,
 dev.off()
 
   Também foi questionado a faixa etária dos filhos, mas como nenhum participante declarou ter filhos, essa análise não foi representada gráficamente. Lembrando que não possuir filhos se mostra mais comum nessa população, o que pode influenciar no tempo que eles passam nas mídias, ou se estão solteiros quais mídias eles usam mais. Assim como se tivesse a faixa etária dos filhos declarada, poderia influenciar no tempo dedicado nas mídias dependendo da idade do filho.
+  
 # Opiniao sobre uso das midias sociais no ensino
+
+    Nesta pesquisa, foram levantados dados sobre o uso das redes sociais como uma ferramenta que pode ser usada pelos professores da universidade, 62.3%  declaram que as redes devem ser utilizadas como ferramenta dos professores entretanto, 1.6% dizem que nao deveria ser utilizada como auxilio do professor, 31.1% dos entrevistados declaram que sim porem com restri��es e por fim 4.9% disseram n�o haver uma opni�o formada sobre o assunto discutido.
+    
+### 1. N�o
+### 2. Sim
+### 3. Sim, porem com restri��es
+### 4. N�o tenho opni�o
+
+academico=table(df$usoacademico)
+academico
+
+lbls <- c("N�o", "Sim", "Sim, com restri��o", "Sem opni�o")
+
+porcentagem_academico <- round(academico/sum(academico)*100, digits=1)
+porcentagem_academico
+
+png(filename="graficos/UsoAcademico.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+lbls <- paste0(porcentagem_academico,"% ", lbls) # add percents to labels
+lbls
+
+### Geração do gráfico tipo pizza (pie)
+pie(academico, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "blue", "pink"), main = "Midias sociais como ferramenta do professor")
+
+dev.off()
+
 
 

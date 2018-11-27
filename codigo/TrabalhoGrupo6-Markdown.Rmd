@@ -14,7 +14,7 @@ fontsize: 12pt
 knitr::opts_chunk$set(echo = TRUE)
 if (!require(readxl)) install.packages('readxl')
 library(readxl)
-df <- read_xlsx("dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
+df <- read_xlsx("C:/Grupo-6/dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
 ```
 
 
@@ -26,11 +26,11 @@ df <- read_xlsx("dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
 ## Fundamentacao Teorica
 
 ### R
-  Desenvolvido pelos estatísticos Ross Ihaka e Robert Gentleman na década de 90, o R é considerado  uma linguagem e também um ambiente utilizado para desenvolver análises estatísticas, e produzir gráficos. IBPAD (2017) relata que o software R fornece uma grande variedade de análises como : "modelagem linear e não-linear, testes estatísticos clássicos, análise de séries temporais, classificação, agrupamento, entre outros".
+  Desenvolvido pelos estat?sticos Ross Ihaka e Robert Gentleman na d?cada de 90, o R ? considerado  uma linguagem e tamb?m um ambiente utilizado para desenvolver an?lises estat?sticas, e produzir gr?ficos. IBPAD (2017) relata que o software R fornece uma grande variedade de an?lises como : "modelagem linear e n?o-linear, testes estat?sticos cl?ssicos, an?lise de s?ries temporais, classifica??o, agrupamento, entre outros".
 
- O software se destaca por uma ampla possibilidade de codificação de cálculos, matrizes, e funções, além disso, possui um extenso mecanismo para armazenar os dados que serão filtrados pelo programador através da ferramenta. O programa pode ser utilizado para coletar, armazenar e analisar dados de diferentes áreas, é possível criar gráficos com dados estatísticos por exemplo do painel eleitoral do nosso país, ou até mesmo a criação de mapas financeiros utilizando gráficos de pizza, barras entre outros (IBPAD, 2017).
+ O software se destaca por uma ampla possibilidade de codifica??o de c?lculos, matrizes, e fun??es, al?m disso, possui um extenso mecanismo para armazenar os dados que ser?o filtrados pelo programador atrav?s da ferramenta. O programa pode ser utilizado para coletar, armazenar e analisar dados de diferentes ?reas, ? poss?vel criar gr?ficos com dados estat?sticos por exemplo do painel eleitoral do nosso pa?s, ou at? mesmo a cria??o de mapas financeiros utilizando gr?ficos de pizza, barras entre outros (IBPAD, 2017).
 
-  Uma de suas vantagem é o fato de ser um software de código aberto(open source), ou seja, possibilita que qualquer pessoa possa utilizá-lo, além disso este programa vem ganhando destaque entre pesquisadores, engenheiros e profissionais do ramo estatístico, também contém diversos pacotes que incrementam as suas funcionalidades, fazendo com que cresça cada vez mais, é possível fazer seu download em diferentes plataformas como : windows, linux e mac.
+  Uma de suas vantagem ? o fato de ser um software de c?digo aberto(open source), ou seja, possibilita que qualquer pessoa possa utiliz?-lo, al?m disso este programa vem ganhando destaque entre pesquisadores, engenheiros e profissionais do ramo estat?stico, tamb?m cont?m diversos pacotes que incrementam as suas funcionalidades, fazendo com que cres?a cada vez mais, ? poss?vel fazer seu download em diferentes plataformas como : windows, linux e mac.
 
 
 ### R Markdown
@@ -219,31 +219,55 @@ dev.off()
   
 # Opiniao sobre uso das midias sociais no ensino
 
-    Nesta pesquisa, foram levantados dados sobre o uso das redes sociais como uma ferramenta que pode ser usada pelos professores da universidade, 62.3%  declaram que as redes devem ser utilizadas como ferramenta dos professores entretanto, 1.6% dizem que nao deveria ser utilizada como auxilio do professor, 31.1% dos entrevistados declaram que sim porem com restrições e por fim 4.9% disseram não haver uma opnião formada sobre o assunto discutido.
+    Nesta pesquisa, foram levantados dados sobre o uso das redes sociais como uma ferramenta que pode ser usada pelos professores da universidade, 62.3%  declaram que as redes devem ser utilizadas como ferramenta dos professores entretanto, 1.6% dizem que nao deveria ser utilizada como auxilio do professor, 31.1% dos entrevistados declaram que sim porem com restri??es e por fim 4.9% disseram n?o haver uma opni?o formada sobre o assunto discutido.
     
-### 1. Não
+### 1. N?o
 ### 2. Sim
-### 3. Sim, porem com restrições
-### 4. Não tenho opnião
+### 3. Sim, porem com restri??es
+### 4. N?o tenho opni?o
 
 academico=table(df$usoacademico)
 academico
 
-lbls <- c("Não", "Sim", "Sim, com restrição", "Sem opnião")
+lbls <- c("N?o", "Sim", "Sim, com restri??o", "Sem opni?o")
 
 porcentagem_academico <- round(academico/sum(academico)*100, digits=1)
 porcentagem_academico
 
-png(filename="graficos/UsoAcademico.png", width = 800, height = 500, pointsize = 16)
-par(bg = "bisque")
 
 lbls <- paste0(porcentagem_academico,"% ", lbls) # add percents to labels
 lbls
+png(filename="graficos/UsoAcademico.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
 
 ### GeraÃ§Ã£o do grÃ¡fico tipo pizza (pie)
 pie(academico, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "blue", "pink"), main = "Midias sociais como ferramenta do professor")
 
 dev.off()
 
+Foram adquiridos tambÃ©m dados referentes Ã  opniÃ£o dos participantes sobre a utilizaÃ§Ã£o das mÃ­dias sociais como forma de os professores se aproximarem de seus alunos. 
 
+### 1. Nao
+### 2. Sim
+### 4. Nao sei/Nao tenho opniao
+
+prof=table(df$profchegaal)
+prof
+
+lbls <- c("Nao", "Sim", "Nao sei/Nao tenho opiniao")
+
+porcentagem_prof <- round(prof/sum(prof)*100, digits=1)
+porcentagem_prof
+
+lbls <- paste0(porcentagem_prof,"% ", lbls) 
+lbls
+
+png(filename="graficos/AproximacaoProfessores.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+### GeraÃ§Ã£o do grÃ¡fico tipo pizza (pie)
+pie(prof, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "pink"), main = "Aproximacao dos Professores por meio de Midias Sociais")
+
+dev.off()
 

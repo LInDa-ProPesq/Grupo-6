@@ -358,7 +358,7 @@ pie(academico, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet
 
 dev.off()
 ```
-Foram adquiridos tamb√©m dados referentes √† opni√£o dos participantes sobre a utiliza√ß√£o das m√≠dias sociais como forma de os professores se aproximarem de seus alunos. O resultado, como visto no gr√°fico a seguir, demonstra que 37.7% dos participantes concordam em utilizar as redes sociais como uma forma de os professores se paroximarem de seus alunos, 36.1% n√£o concordam e 26.2% n√£o possuem opini√£o a respeito dessa quest√£o.
+  Foram adquiridos tamb√©m dados referentes √† opni√£o dos participantes sobre a utiliza√ß√£o das m√≠dias sociais como forma de os professores se aproximarem de seus alunos. O resultado, como visto no gr√°fico a seguir, demonstra que 37.7% dos participantes concordam em utilizar as redes sociais como uma forma de os professores se paroximarem de seus alunos, 36.1% n√£o concordam e 26.2% n√£o possuem opini√£o a respeito dessa quest√£o.
 
 ### 1. N√£o
 ### 2. Sim
@@ -385,6 +385,35 @@ dev.off()
 
 ```
 
+
+  Nesse estudo, foram tambem constatados dados referente  ao envio de informaÁıes do local de ensino para os pais utilizando as midias sociais. Pode-se notar que mais da metade dos alunos entrevistados acreditam que esta È uma boa(37,7%) e tambem uma excelente(23%) aÁ„o a ser tomada pelas instituiÁıes de ensino entretanto, ainda h· no total 14% das pessoas que acreditam que isto n„o deveria ser feito, ent„o È possivel constatar uma certa resistencia a este assunto por parte dos alunos.
+
+### 1. Excelente
+### 2. Bom
+### 3. Indiferente
+### 4. Ruim
+### 5. Muito ruim
+``` {r, grafico8, echo=TRUE}
+
+envioinfo=table(df$evioinfo)
+envioinfo
+
+lbls <- c("Excelente", "Bom", "Indiferente", "Ruim", "Muito ruim")
+
+porcentagem_questoes <- round(envioinfo/sum(envioinfo)*100, digits=1)
+porcentagem_questoes
+
+lbls <- paste0(porcentagem_questoes,"% ", lbls) 
+lbls
+
+#png(filename="graficos/EnvioDeInformaÁıes.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+### Gera√ß√£o do gr√°fico tipo pizza (pie)
+pie(envioinfo, labels = lbls, edges = 100, angle = 45, col = c("blue","green", "yellow","orange", "red"), main = "Envio de informaÁıes da escolapara os pais")
+
+dev.off()
+```
 
 # Conclus√£o
 

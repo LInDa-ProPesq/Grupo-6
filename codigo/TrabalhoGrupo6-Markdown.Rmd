@@ -297,15 +297,15 @@ dev.off()
 ``` {r, grafico6, echo=TRUE}
 
   redes_sociais <- c(
-    sum(ep$facebook == '1'),
-    sum(ep$twitter == '1'),
-    sum(ep$whatsapp == '1'),
-    sum(ep$linkedin == '1'),
-    sum(ep$youtube == '1'),
-    sum(ep$instagram == '1'),
-    sum(ep$snapchat == '1'),
-    sum(ep$tumblr == '1'),
-    sum(ep$pinterest == '1')
+    sum(df$facebook == '1'),
+    sum(df$twitter == '1'),
+    sum(df$whatsapp == '1'),
+    sum(df$linkedin == '1'),
+    sum(df$youtube == '1'),
+    sum(df$instagram == '1'),
+    sum(df$snapchat == '1'),
+    sum(df$tumblr == '1'),
+    sum(df$pinterest == '1')
   )
   redes_sociais
  
@@ -362,7 +362,7 @@ dev.off()
 
 ### 1. Não
 ### 2. Sim
-### 4. Não sei/Não tenho opnião
+### 3. Não sei/Não tenho opnião
 ``` {r, grafico8, echo=TRUE}
 prof=table(df$profchegaal)
 prof
@@ -385,6 +385,7 @@ dev.off()
 
 ```
 
+<<<<<<< HEAD
   Ainda que haja opni�es a favor das redes sociais no universo educacional, existem barreiras que podem atrapalhar o caminho do desenvolvimento desta ferramenta como suporte ao ensino. Na pesquisa realizada, foram coletados dados a respeito das possiveis dificuldades encontradas, � possivel notar que as distra��es s�o o grande enfoque negativo segundo os estudantes entrevistados, logo em seguida o uso indevido pode ser considerado um outra barreira forte a essa ideia de inser��o das midias nos ambientes educacionais.
   
 ``` {r, grafico9, echo=TRUE}
@@ -420,8 +421,30 @@ legend("topleft", legend = c("distra��o", "uso indevido", "prejudica a intera��o
 
 ```
 
+=======
+Outra questão levantada na pesquisa foi a respeito da integração das mídias sociais nas aulas e atividades objetivando que os alunos alcancem melhores resultados. 60.7% dos participantes concordam que a integração melhoraria o desepenho dos alunos, 13.1% não concordam e 26.2% não possuem opinião a respeito.
+  
+### 1. Não
+### 2. Sim
+### 4. Não sei/Não tenho opnião
+>>>>>>> c3493d30f4df26ec443c7c5ac0168508759098ce
 
-  Nesse estudo, foram tambem constatados dados referente  ao envio de informa��es do local de ensino para os pais utilizando as midias sociais. Pode-se notar que mais da metade dos alunos entrevistados acreditam que esta � uma boa(37,7%) e tambem uma excelente(23%) a��o a ser tomada pelas institui��es de ensino entretanto, ainda h� no total 14% das pessoas que acreditam que isto n�o deveria ser feito, ent�o � possivel constatar uma certa resistencia a este assunto por parte dos alunos.
+``` {r, graficoMelhoresResultados, echo=TRUE}
+melhoresult=table(df$melhoraresul)
+melhoresult
+lbls <- c("Não", "Sim", "Não sei/Não tenho opinião")
+porcentagem_melhoresult <- round(melhoresult/sum(melhoresult)*100, digits=1)
+porcentagem_melhoresult
+lbls <- paste0(porcentagem_melhoresult,"% ", lbls) 
+lbls
+#png(filename="graficos/MelhoraResultado.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+ ### Geração do gráfico tipo pizza (pie)
+pie(melhoresult, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "pink"), main = "Integracao das Midias Sociais nas Aulas para que os Alunos Obtenham Melhores Resultados")
+ dev.off()
+
+```
+  Nesse estudo, foram tambem constatados dados referente  ao envio de informações do local de ensino para os pais utilizando as midias sociais. Pode-se notar que mais da metade dos alunos entrevistados acreditam que esta é uma boa (37,7%) e tambem uma excelente(23%) ação a ser tomada pelas instituiçõees de ensino entretanto, ainda há no total 14% das pessoas que acreditam que isto não deveria ser feito, então é possivel constatar uma certa resistencia a este assunto por parte dos alunos.
 
 ### 1. Excelente
 ### 2. Bom
@@ -441,17 +464,18 @@ porcentagem_questoes
 lbls <- paste0(porcentagem_questoes,"% ", lbls) 
 lbls
 
-#png(filename="graficos/EnvioDeInforma��es.png", width = 800, height = 500, pointsize = 16)
+#png(filename="graficos/EnvioDeInformações.png", width = 800, height = 500, pointsize = 16)
 par(bg = "bisque")
 
 ### Geração do gráfico tipo pizza (pie)
-pie(envioinfo, labels = lbls, edges = 100, angle = 45, col = c("blue","green", "yellow","orange", "red"), main = "Envio de informa��es da escolapara os pais")
+pie(envioinfo, labels = lbls, edges = 100, angle = 45, col = c("blue","green", "yellow","orange", "red"), main = "Envio de informações da escola para os pais")
 
 dev.off()
 ```
 
 # Conclusão
 
-    Com as informações apresentadas, concluímos que há sim diversos fatores que podem influenciar no uso das mídias sociais pelos discentes, tanto por fatores pessoais como idade, se possui filhos, estado civil, entre outros, como por fatores sociais como a busca por recolocação no mercado de trabalho. 
-    Uma pequena minoria se mostrou totalmente contra o uso das redes sociais como ferramenta pelos professores, mostrando uma abertura para essa abordagem ser explorada. Porém uma porcentagem maior se mostrou contra a aproximação dos professores  pela rede social, podendo demonstrar que preferem um tratamento mais formal entre as partes.
+   Com as informações apresentadas, concluímos que há sim diversos fatores que podem influenciar no uso das mídias sociais pelos discentes, tanto por fatores pessoais como idade, se possui filhos, estado civil, entre outros, como por fatores sociais como a busca por recolocação no mercado de trabalho. 
+    
+  Uma pequena minoria se mostrou totalmente contra o uso das redes sociais como ferramenta pelos professores, mostrando uma abertura para essa abordagem ser explorada. Porém uma porcentagem maior se mostrou contra a aproximação dos professores  pela rede social, podendo demonstrar que preferem um tratamento mais formal entre as partes.
     

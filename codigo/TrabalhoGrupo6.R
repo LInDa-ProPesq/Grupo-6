@@ -7,4 +7,4 @@ tinytex_root()
 
 use_tinytex(from = "C:\\projetos\\project-rmarkdown\\auto")
 
-> tinytex::tinytex_root()
+tinytex::tinytex_root()

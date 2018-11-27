@@ -26,6 +26,12 @@ df <- read_xlsx("dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
 ## Fundamentacao Teorica
 
 ### R
+  Desenvolvido pelos estatísticos Ross Ihaka e Robert Gentleman na década de 90, o R é considerado  uma linguagem e também um ambiente utilizado para desenvolver análises estatísticas, e produzir gráficos. IBPAD (2017) relata que o software R fornece uma grande variedade de análises como : "modelagem linear e não-linear, testes estatísticos clássicos, análise de séries temporais, classificação, agrupamento, entre outros".
+
+ O software se destaca por uma ampla possibilidade de codificação de cálculos, matrizes, e funções, além disso, possui um extenso mecanismo para armazenar os dados que serão filtrados pelo programador através da ferramenta. O programa pode ser utilizado para coletar, armazenar e analisar dados de diferentes áreas, é possível criar gráficos com dados estatísticos por exemplo do painel eleitoral do nosso país, ou até mesmo a criação de mapas financeiros utilizando gráficos de pizza, barras entre outros (IBPAD, 2017).
+
+  Uma de suas vantagem é o fato de ser um software de código aberto(open source), ou seja, possibilita que qualquer pessoa possa utilizá-lo, além disso este programa vem ganhando destaque entre pesquisadores, engenheiros e profissionais do ramo estatístico, também contém diversos pacotes que incrementam as suas funcionalidades, fazendo com que cresça cada vez mais, é possível fazer seu download em diferentes plataformas como : windows, linux e mac.
+
 
 ### R Markdown
   R Markdown foi projetado com o intuito de facilitar a reprodutibilidade, jÃ¡ que tanto o cÃ³digo de computaÃ§Ã£o quanto as narrativas (parte textual) estÃ£o no mesmo documento, no qual os resultados sÃ£o gerados automaticamente a partir do cÃ³digo-fonte. 

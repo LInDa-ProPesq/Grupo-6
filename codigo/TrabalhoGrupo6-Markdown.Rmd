@@ -246,7 +246,7 @@ pie(academico, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet
 
 dev.off()
 
-Foram adquiridos também dados referentes à opnião dos participantes sobre a utilização das mídias sociais como forma de os professores se aproximarem de seus alunos. O resultado, como visto no gráfico a seguir, demonstra que 37.7% dos participantes concordam em utilizar as redes sociais como uma forma de os professores se paroximarem de seus alunos, 36.1% não concordam e 26.2% não possuem opinião a respeito dessa questão.
+  Foram adquiridos também dados referentes à opnião dos participantes sobre a utilização das mídias sociais como forma de os professores se aproximarem de seus alunos. O resultado, como visto no gráfico a seguir, demonstra que 37.7% dos participantes concordam em utilizar as redes sociais como uma forma de os professores se paroximarem de seus alunos, 36.1% não concordam e 26.2% não possuem opinião a respeito dessa questão.
 
 ### 1. Nao
 ### 2. Sim
@@ -271,3 +271,27 @@ pie(prof, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "p
 
 dev.off()
 
+  Outra questão levantada na pesquisa foi a respeito da integração das mídias sociais nas aulas e atividades objetivando que os alunos alcancem melhores resultados. 60.7% dos participantes concordam que a integração melhoraria o desepenho dos alunos, 13.1% não concordam e 26.2% não possuem opinião a respeito.
+  
+### 1. Nao
+### 2. Sim
+### 4. Nao sei/Nao tenho opniao
+
+melhoresult=table(df$melhoraresul)
+melhoresult
+
+lbls <- c("Nao", "Sim", "Nao sei/Nao tenho opiniao")
+
+porcentagem_melhoresult <- round(melhoresult/sum(melhoresult)*100, digits=1)
+porcentagem_melhoresult
+
+lbls <- paste0(porcentagem_melhoresult,"% ", lbls) 
+lbls
+
+png(filename="graficos/MelhoraResultado.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+### Geração do gráfico tipo pizza (pie)
+pie(melhoresult, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "pink"), main = "Integracao das Midias Sociais nas Aulas para que os Alunos Obtenham Melhores Resultados")
+
+dev.off()

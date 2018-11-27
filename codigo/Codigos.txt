@@ -1,1 +1,30 @@
-Colocar scrpits em R aqui
+código para tentar fazer só o do facebook:
+
+
+install.packages("xlsx")
+install.packages("xlsxjars")
+library(xlsx)
+ep <- read.xlsx("umses_graduacao_2018_vtidy.xlsx", sheetName = "dados")
+head(ep)
+dados <- data.frame(row.names = ep$facebook)
+
+
+
+face <- ep$facebook
+head(face)
+
+facetotalde1 <- sum(face)
+head(facetotalde1)
+
+x <- length(ep$facebook)
+
+pct <- round(facetotalde1/(x)*100, digits=1)
+head(pct)
+face <- paste(pct) # acrescentar os percentuais aos rÃ³tulos 
+face <- paste(face,"%",sep="") # acrescentar o sÃ?mbolo "%" aos rÃ³tulos labels 
+head(face)
+
+pie(ep$facebook, labels = face, edges = 200, radius = 0.8, 
+    clockwise = TRUE, angle = 45, main = "Grafico de Pizza",
+    col = c("blue"),
+    lty = NULL)

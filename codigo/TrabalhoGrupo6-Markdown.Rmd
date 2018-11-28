@@ -338,7 +338,7 @@ dev.off()
          horiz = FALSE, inset = c(0.05, 0.05))
 ``` 
 
-  No gráfico a seguir apresenta os motivos de uso das redes sociais, onde a maioria apresenta uso por conteúdo interessante, seguido por contato com amigos, atualização de noticias e eventos e tempo livre.
+  As redes sociais acabam por ser importantes na vida do estudante, como o grafico abaixo mostra muitos dos entrevistados necessitam utilizar as redes para manter contato, alem das atualizações diarias, e principalmente são uma forma de lazer. Alem desses topicos, algo muito importante é a busca por novos conteudos, já que elas não servem apenas para encontrar os amigos, são ferramentas para alcançar diversas comunidades embusca de respostas e conhecimento, mesmo com porcentagens pequenas, é possivel perceber que elas são utilizadas para compartilhar fotos, como é o caso do instagram ja visto, fazer network, amizades e tambem é uma forma de manter um relacionamento com colegas e conteudos do trabalho.
  
 ``` {r, grafico7, echo=TRUE}
   outros_motivos <- 0

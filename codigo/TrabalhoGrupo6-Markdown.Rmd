@@ -230,9 +230,9 @@ legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integra
 
 dev.off()
 ``` 
-    A situação de trabalho pode levar o indivíduo a passar mais tempo nas redes sociais, ou atém em uma rede social específica, em busca de emprego por exemplo. O mesmo pode acontecer para estagiários ou trabalhadores de período parcial.
+  A situação de trabalho pode levar o indivíduo a passar mais tempo nas redes sociais, ou atém em uma rede social específica, em busca de emprego por exemplo. O mesmo pode acontecer para estagiários ou trabalhadores de período parcial.
 
-    Também foi levantado o estado civil dos participantes, onde apenas 1.6% dos participantes se declararam casados, e os outros 98.4% como solteiros.
+  Também foi levantado o estado civil dos participantes, onde apenas 1.6% dos participantes se declararam casados, e os outros 98.4% como solteiros.
     
 ## Estado Civil
 ### Dicionário de dados
@@ -551,4 +551,27 @@ dev.off()
   A maioria dos usuários declararam usar as redes sociais para motivos pessoais, como conteúdos interessantes, atualização de eventos e manter contato com amigos/familiares. Portanto, as mídias podem se tornar um meio de fácil distração dos fins acadêmicos. Os dados sobre o uso das plataformas já demonstra isso, onde os entrevistados utilizam redes mais direcionadas a produção de conteúdo, como instagram, facebook e youtube.
     
   Uma pequena minoria se mostrou totalmente contra o uso das redes sociais como ferramenta pelos professores, mostrando uma abertura para essa abordagem ser explorada. Porém uma porcentagem maior se mostrou contra a aproximação dos professores  pela rede social, podendo demonstrar que preferem um tratamento mais formal entre as partes.
+    
+# Referências Bibliográficas
+ABGCONSULTORIA. Uma breve introdução ao software R. Disponivel em: <http://www.abgconsultoria.com.br/blog/uma-breve-introducao-ao-software-r/>. Acesso em: 26/11/2018.
+
+BELL, Peter; BEER, Brent. Introdução ao GitHub. 1 ed. São Paulo: Novatec, 2015.
+
+CORRÊA, Iago da Cunha; ARAUJO, Cássio Castro; MEDINA, Alexandre Moreira. Tutorial Git. 2016. Disponível em: <http://coral.ufsm.br/pet-si/wp-content/uploads/2017/02/Consult%C3%B3rio-de-Software-Git.pdf>. Acesso em 26/11/2018.
+
+IBPAD. O que programação ou Linguagem R?. Disponível em: <https://www.ibpad.com.br/blog/o-que-e-programacao-ou-linguagem-em-r/>. Acesso em: 26/11/2018.
+
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Anuário Estatístico da Unesp. Disponível em: <https://ape.unesp.br/anuario/>. Acesso em: 25/11/2018.
+
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Disponível em: <https://www.bauru.unesp.br/>. Acesso em: 25/11/2018.	
+
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Histórico da instituição Unesp. Disponível em: <https://www.fc.unesp.br/#!/instituicao/historico/>.Acesso em: 26/11/2018.	
+
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Histórico da instituição Unesp. Disponível em: <http://www.faac.unesp.br/#!/instituicao/historico/>, .Acesso em: 26/11/2018.	
+
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Histórico da instituição Unesp. Disponível em: <http://www.feb.unesp.br/#!/instituicao/historico/> .Acesso em: 26/11/2018.	
+
+XIE, Y. ALLAIRE, J. J. GROLEMUND, G. R Markdown The Definitive Guide, Chapman & Hall/CRC,  2018. 
+
+
     

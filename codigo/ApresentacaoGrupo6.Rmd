@@ -1,0 +1,532 @@
+---
+title: "Apresentação Grupo 6 - O Uso da Midia Social no Ensino Superior"
+output: ioslides_presentation
+author: Bruna Passerani, Guilherme Fuentes, Priscila da Rocha, Vittoria Zago, Winea
+  Pasquareli
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+if (!require(readxl)) install.packages('readxl')
+library(readxl)
+df <- read_xlsx("C:/Grupo-6/dados/umses_graduacao_2018_vtidy.xlsx", sheet="dados")
+```
+
+
+##  Introdução
+  Este trabalho tem como objetivo estudar os dados e levantar assim informações sobre o uso das mídias sociais nos discentes da instituição de nível superior UNESP em Bauru, SP. Através da ciência de dados, procuramos descobrir a relevância da mídia social para essa população: quais são mais usadas, por quanto tempo, com qual finalidade, e quais características influenciam nesse resultado. 
+  
+## Introdução  
+  Com esse resultado, informações valiosas podem ser extraídas e usadas estrategicamente, pelos professores ao conseguirem melhor propagação do conteúdo ensinado por exemplo, ou empresas de marketing atingirem melhores resultados ao investir mais em uma rede social.
+  Nos próximos capítulos, veremos uma análise sobre as ferramentas e técnicas utilizadas, além das representações gráficas dos estudos realizados.
+
+## Fundamentacao Teorica
+### R
+  Desenvolvido pelos estatísticos Ross Ihaka e Robert Gentleman na década de 90, o R é considerado  uma linguagem e também um ambiente utilizado para desenvolver análises estatísticas, e produzir gráficos. IBPAD (2017) relata que o software R fornece uma grande variedade de análises como : “modelagem linear e não-linear, testes estatísticos clássicos, análise de séries temporais, classificação, agrupamento, entre outros”.
+  
+## Fundamentacao Teorica
+### R
+  Uma de suas vantagem é o fato de ser um software de código aberto(open source), ou seja, possibilita que qualquer pessoa possa utilizá-lo, além disso este programa vem ganhando destaque entre pesquisadores, engenheiros e profissionais do ramo estatístico, também contém diversos pacotes que incrementam as suas funcionalidades, fazendo com que cresça cada vez mais, é possível fazer seu download em diferentes plataformas como : Windows, Linux e Mac
+  
+## Fundamentacao Teorica
+### R Markdown
+R Markdown foi projetado com o intuito de facilitar a reprodutibilidade, já que tanto o código de computação quanto as narrativas (parte textual) estão no mesmo documento, no qual os resultados são gerados automaticamente a partir do código-fonte. 
+
+## Fundamentacao Teorica
+### R Markdown
+  Existem dois tipos de formatos de saída no pacote rmarkdown: documentos e apresentações. Todos os formatos disponíveis estão listados abaixo:
+  
+-Apresentação beamer
+
+-Apresentação ioslides
+
+-Apresentação em powerpoint
+
+-Apresentação slidy
+
+-Documento github
+
+##Fundamentacao Teorica
+### R Markdown
+-Documento HTML
+
+-Documento pdf
+
+-Documento do Word
+
+-Documento latex
+
+-Documento MD
+
+-Documento ODT
+
+-Documento RTF
+
+##Fundamentacao Teorica
+### Github
+
+Git é um sistema de controle de versões distribuído que foi criado por Linus Torvalds em 2005. Um sistema de controle de versões pode ser definido como um software que mantém um registro com as alterações realizadas em determinado projeto ou arquivo ao longo do tempo. Por ser distribuído, todos os integrantes de um projeto possuem acesso a todo o histórico de versões deste e não apenas de seu estado atual.
+
+##Fundamentacao Teorica
+### Github
+A ideia de sua criação surgiu quando Torvalds e os demais desenvolvedores do kernel Linux decidiram não utilizar mais o software controlador de versões BitKeeper após o detentor dos direitos autorais deste, Larry Macvoy, remover o acesso gratuito à ferramenta. 
+
+##Fundamentacao Teorica
+### Github
+ Como Torvalds desejava uma ferramenta semelhante ao BitKeeper para auxiliar no desenvolvimento do kernel do Linux, decidiu desenvolver seu próprio sistema controlador de versões, criando, assim, o Git. Por conta de sua velocidade e praticidade, o Git obteve sucesso e conseguiu diversos usuários pelo mundo.
+
+##Fundamentacao Teorica
+### Github
+ O GitHub é um site que permite a seus usuários a hospedagem de uma cópia de repositórios Git. Além disso, ele também possibilita a colaboração de integrantes de um grupo para desenvolver um projeto por possuir um local centralizado para compartilhar um repositório, interface web para visualizá-lo e também recursos como forking, pull, requests, issues e wikis que permite discussões, revisões e alterações no projeto junto à equipe de forma eficiente.
+ 
+##Fundamentacao Teorica
+### UNESP
+
+A Universidade Estadual Paulista possui atualmente matriculados 37.997 alunos de graduação, 13.998 alunos de pòs graduação, 7.392 alunos de mestrado e 6.606 alunos de doutorado. Além disso, possui um número de 3.389 docentes. Dados estes sendo do Anuário Estatístico da Unesp do ano de 2017. 
+
+##Fundamentacao Teorica
+### UNESP
+O campus surgiu em 15 de agosto de 1988, após a Unesp incorporar a UB (universidade de Bauru) com a seguinte estrutura: 03 Unidades Universitárias que oferecem Cursos de Graduação, Pós-Graduação, Mestrado/Doutorado, Cursos de Especialização, e 01 Unidade Administrativa. As 03 unidades universitárias são: a Faculdade de arquitetura, artes e comunicação (FAAC), a Faculdade de ciências (FC) e a Faculdade de Engenharia de Bauru (FEB), além da Administração geral (AG).
+
+##Dados Censitarios
+  Na pesquisa realizada tivemos a participação da seguinte proporção de público feminino e masculino:
+  
+  ``` {r, grafico1, echo=FALSE}
+sexo=table(df$genero)
+
+
+lbls <- c("Masculino", "Feminino")
+
+pct <- round(sexo/sum(sexo)*100, digits=1)
+
+
+lbls <- paste0(pct,"% ", lbls) # add percents to labels
+
+par(bg = "bisque")
+
+### Geração do gráfico tipo pizza (pie)
+pie(sexo, labels = lbls, edges = 100, angle = 45, col = c("deepskyblue","darkviolet", "green3"), main = "Genero dos participantes")
+
+dev.off()
+```
+
+##Dados Censitarios
+  Conforme mostrado na figura tivemos participação de 60,7% publico masculino e 39,3% de publico feminino.
+  
+##Dados Censitarios 
+  A faixa etária dos participantes foi a seguinte:
+  ``` {r, grafico2, echo=FALSE}
+idade=table(df$idade)
+
+rotulos <- c("Entre 16 e 20 anos", "Entre 21 e 25 anos", "Entre 26 e 30 anos", 
+"Entre 30 e 35 anos","Entre 36 e 40 anos", "6. Acima de 40 anos")
+porc_Idade <- round(idade/sum(idade)*100, digits=1)
+
+
+#png(filename="graficos/Idade.png", width = 800, height = 500, pointsize = 16)
+
+
+par(bg = "bisque")
+
+### Geração do gráfico tipo barra (barplot)
+my_bar=barplot(idade, border=F, names.arg = NA, las=2,
+               col = c("green","deepskyblue", "yellow", "red","purple", "pink"),
+               ylab = "Quantidade",
+               xlab = "Faixa Etaria",
+               ylim = c(0,80),
+               main = "Idade dos Participantes")
+
+text(my_bar, idade+4, paste("n = ",idade,sep=""),cex=1) 
+
+
+legend("topleft", legend = c("Entre 16 e 20 anos", "Entre 21 e 25 anos", "Entre 26 e 30 anos", "Entre 30 e 35 anos",
+        "Entre 36 e 40 anos", "6. Acima de 40 anos"),
+       col = c("green","deepskyblue", "yellow", "red","purple", "pink"),
+       bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
+       horiz = FALSE, inset = c(0.05, 0.05))
+
+dev.off()
+```
+##Dados Censitarios 
+Apos análise grafica temos que 42,6% dos participantes pertenciam à faixa etária entre 16 e 20 anos, 52,5% na faixa etária entre 21 e 25 anos e 4,9% na faixa etária entre 26 e 30 anos. A faixa etária dos participantes tem grande impacto para a pesquisa pois é composta da proxima geração ingressante no Ensino Superior etambém daqueles que a estão cursando neste momento. 
+
+##Dados Censitarios 
+As mídias sociais estão presentes na vida dos estudantes do ensino superior e alguns estudos apontaram que grande parte destes estudantes usam as mídias sociais para interação com outros usuários e para construção de relacionamentos.
+
+
+##Situacao Trabalhista
+  A seguir dados sobre situação trabalista dos participantes:
+  ``` {r, grafico3, echo=FALSE}
+trabalha=table(df$trabalha)
+
+rot <- c("Desempregado", "Jornada parcial", "Jornada integral", "Estagi?rio",
+             "Trabalha por conta pr?pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes")
+porc_Trabalha <- round(trabalha/sum(trabalha)*100, digits=1)
+
+#png(filename="graficos/Trabalha.png", width = 800, height = 500, pointsize = 16)
+
+par(bg = "bisque")
+
+# Geração do gráfico tipo barra (barplot)
+my_bar=barplot(trabalha, border=F, names.arg = NA, las=2,
+               col = c("green","deepskyblue", "yellow", "red","purple", "pink", "red","blue"),
+               ylab = "Quantidade",
+               xlab = "Status",
+               ylim = c(0,80),
+               main = "Situacao Trabalhista dos Participantes")
+# Adicionando o texto a ser exibido 
+text(my_bar, trabalha+4, paste("n = ",trabalha,sep=""),cex=1) 
+
+#Agora adicionando a legenda ao gráfico
+legend("topleft", legend = c("Desempregado", "Jornada parcial", "Jornada integral", "Estagiário",
+        "Trabalha por conta pr?pria", "Afastado temporariamente", "Aposentado", "Bolsista Capes"),
+       col = c("green","deepskyblue", "yellow", "red","purple", "pink", "red","blue"),
+       bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
+       horiz = FALSE, inset = c(0.05, 0.05))
+
+
+dev.off()
+``` 
+##Situacao Trabalhista
+A situação de trabalho pode levar o indivíduo a passar mais tempo nas redes sociais, ou atém em uma rede social específica, em busca de emprego por exemplo. O mesmo pode acontecer para estagiários ou trabalhadores de período parcial.
+
+##Estado Civil
+  Também foi levantado o estado civil dos participantes, onde apenas 1.6% dos participantes se declararam casados, e os outros 98.4% como solteiros.
+  
+  ``` {r, grafico4, echo=FALSE}
+estadocivil=table(df$estadocivil)
+
+
+lbls <- c("solteiro", "casado", "uniao", "viuvo", "separado", "naodeclara")
+
+pct <- round(estadocivil/sum(estadocivil)*100, digits=1)
+
+
+lbls <- paste0(pct,"% ", lbls) # add percents to labels
+
+#png(filename="graficos/EstadoCivil.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+### Geração do gráfico tipo pizza (pie)
+pie(estadocivil, labels = lbls, edges = 100, angle = 45, col = c("deepskyblue","darkviolet", "green3"), main = "Estado Civil dos participantes")
+
+dev.off()
+```
+
+##Dados Censitarios 
+Quanto a quantidade de filhos, 100% dos participantes declararam não ter nenhum filho, o que se mostra bem coerente com os participantes onde mais de 95% está abaixo dos 25 anos e quase 95% como solteiros. Já foi comprovado que as mulheres com maior nível de escolaridade, postergam mais seus filhos e diminuem a taxa de fecundidade, além disso, no Brasil é mais comum ter filhos após o casamento.
+
+##Dados Censitarios 
+``` {r, grafico5, echo=FALSE}
+temfilhos=table(df$filhos)
+
+lbls <- c("Sem Filhos", "Um", "Dois", "Tres", "Mais de Três Filhos")
+porc_temfilhos <- round(temfilhos/sum(temfilhos)*100, digits=1)
+
+#png(filename="graficos/TemFilhos.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+lbls <- paste0(porc_temfilhos,"% ", lbls) # add percents to labels
+
+
+
+### Geração do gráfico tipo pizza (pie)
+pie(temfilhos, labels = lbls, edges = 100, angle = 45, 
+    col = c("deepskyblue","darkviolet", "green3"), main = "Quantidade de filhos dos participantes")
+
+dev.off()
+```
+
+# Opiniao sobre uso das midias sociais no ensino
+
+  Das redes sociais apresentadas, segue a representação gráfica em percentual do uso, indicando que a rede WhatsApp é utilizada por todos os participantes, seguido pelo facebook, youtube e instagram.
+  
+# Opiniao sobre uso das midias sociais no ensino
+``` {r, grafico6, echo=FALSE}
+  outras_plataformas <- 0
+  for (i in df$outras_plataformas){
+    if(!is.na(i)){
+      outras_plataformas <- outras_plataformas+1
+    }
+  }
+  outras_plataformas
+  redes_sociais <- c(
+    sum(df$facebook == '1'),
+    sum(df$twitter == '1'),
+    sum(df$whatsapp == '1'),
+    sum(df$linkedin == '1'),
+    sum(df$youtube == '1'),
+    sum(df$instagram == '1'),
+    sum(df$snapchat == '1'),
+    sum(df$tumblr == '1'),
+    sum(df$pinterest == '1'),
+    outras_plataformas
+  )
+  
+ 
+  #png(filename="graficos/RedesSociais", width = 800, height = 500, pointsize = 16)
+  
+  # Definindo a cor de fundo do gráfico
+  par(bg = "bisque")
+  
+  # Geração do gráfico tipo barra (barplot)
+  my_bar=barplot(redes_sociais, border=F, names.arg = NA, las=2,
+                 col = c("deepskyblue", "orange","darkviolet", "green3", "pink", "red", "purple","yellow", "grey","green2","pink3"),
+                 ylab = "Quantidade",
+                 xlab = "Redes Sociais",
+                 ylim = c(0,130),
+                 main = "Uso das Redes Sociais")
+  # Adicionando o texto a ser exibido 
+  text(my_bar, redes_sociais+4, paste("n = ",redes_sociais,sep=""),cex=1) 
+  
+  #Agora adicionando a legenda ao gráfico
+  legend("topleft", legend = c("facebook", "twitter", "whatsapp", "linkedin", "youtube", "instagram", "snapchat", "tumblr", "pinterest", "outros"),
+         col = c("deepskyblue", "orange","darkviolet", "green3", "pink", "red", "purple","yellow", "grey", "green2","pink3"),
+         bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
+         horiz = FALSE, inset = c(0.05, 0.05))
+``` 
+
+##Redes Sociais
+As redes sociais acabam por ser importantes na vida do estudante, como o grafico abaixo mostra muitos dos entrevistados necessitam utilizar as redes para manter contato, alem das atualizações diarias, e principalmente são uma forma de lazer. Alem desses topicos, algo muito importante é a busca por novos conteudos, já que elas não servem apenas para encontrar os amigos, são ferramentas para alcançar diversas comunidades embusca de respostas e conhecimento, mesmo com porcentagens pequenas, é possivel perceber que elas são utilizadas para compartilhar fotos, como é o caso do instagram ja visto, fazer network, amizades e tambem é uma forma de manter um relacionamento com colegas e conteudos do trabalho.
+
+##Redes Sociais
+``` {r, grafico7, echo=FALSE}
+  outros_motivos <- 0
+  for (i in df$outros_motivos){
+    if(!is.na(i)){
+      outros_motivos <- outros_motivos+1
+    }
+  }
+  
+  motivos_uso <- c(
+    sum(df$contato == '1'),
+    sum(df$atualizado == '1'),
+    sum(df$preencher == '1'),
+    sum(df$encontrar == '1'),
+    sum(df$compopiniao == '1'),
+    sum(df$compfoto == '1'),
+    sum(df$amigosja == '1'),
+    sum(df$profnetwork == '1'),
+    sum(df$novaamizade == '1'),
+    sum(df$compdetalhe == '1'),
+    outros_motivos
+  )
+  
+  
+  #png(filename="graficos/MotivosUso", width = 800, height = 500, pointsize = 16)
+  # Definindo a cor de fundo do gráfico
+  par(bg = "bisque")
+  # Geração do gráfico tipo barra (barplot)
+  my_bar=barplot(motivos_uso, border=F, names.arg = NA, las=2,
+                 col = c("deepskyblue", "orange","darkviolet", "green3", "pink", "red", "purple","yellow", "grey","green2","pink3"),
+                 ylab = "Quantidade",
+                 xlab = "Motivo",
+                 ylim = c(0,130),
+                 main = "Motivos de uso")
+  # Adicionando o texto a ser exibido 
+  text(my_bar, motivos_uso+4, paste("n = ",motivos_uso,sep=""),cex=1) 
+  
+  #Agora adicionando a legenda ao gráfico
+  legend("topleft", legend = c("Contato", "Atualizacao", "Tempo Livre", "Conteúdo interessante", "Compartilhar opinião", "Compartilhar fotos", "Amigoss na rede", "Networking Profissional", "Nova amizade", "Trabalho", "Outros"),
+         col = c("deepskyblue", "orange","darkviolet", "green3", "pink", "red", "purple","yellow", "grey", "green2","pink3"),
+         bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
+         horiz = FALSE, inset = c(0.05, 0.05))
+```  
+
+##Redes Sociais
+Segue o tempo gasto declarado pelos participantes.
+
+``` {r, grafico8, echo=FALSE}
+  tempo_gasto=table(df$tempogasto)
+  
+  lbls <- c("Nenhum", "de 5 a 10min", "de 10 a 30min", "de 30min a 1hr", "de 1 a 2hr", "de 2 a 3hr", "de 3 a 4hr", "e 4 a 5hr", "mais de 5hr")
+  porcentagem_tempo_gasto <- round(tempo_gasto/sum(tempo_gasto)*100, digits=1)
+  porcentagem_tempo_gasto
+  lbls <- paste0(porcentagem_tempo_gasto,"% ", lbls) 
+  
+  #png(filename="graficos/TempoGastoRedesSociais.png", width = 800, height = 500, pointsize = 16)
+  par(bg = "bisque")
+  ### Geração do gráfico tipo pizza (pie)
+  pie(tempo_gasto, labels = lbls, edges = 100, angle = 45, col = c("deepskyblue", "orange","darkviolet", "green3", "pink", "red", "purple","yellow", "grey", "green2","pink3"), 
+      main = "Tempo gasto nas Redes sociais")
+```  
+
+##Redes Sociais
+Nesta pesquisa, foram levantados dados sobre o uso das redes sociais como uma ferramenta que pode ser usada pelos professores da universidade, 62.3%  declaram que as redes devem ser utilizadas como ferramenta dos professores entretanto, 1.6% dizem que nao deveria ser utilizada como auxilio do professor, 31.1% dos entrevistados declaram que sim porem com restrições e por fim 4.9% disseram não haver uma opnião formada sobre o assunto discutido.
+
+##Redes Sociais
+``` {r, grafico9, echo=FALSE}
+academico=table(df$usoacademico)
+
+
+lbls <- c("Não", "Sim", "Sim, com restrição", "Sem opnião")
+
+porcentagem_academico <- round(academico/sum(academico)*100, digits=1)
+
+
+
+lbls <- paste0(porcentagem_academico,"% ", lbls) # add percents to labels
+
+#png(filename="graficos/UsoAcademico.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+
+### Geração do gráfico tipo pizza (pie)
+pie(academico, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "blue", "pink"), main = "Midias sociais como ferramenta do professor")
+
+dev.off()
+```
+
+
+##Redes Sociais
+ Foram adquiridos também dados referentes à opnião dos participantes sobre a utilização das mídias sociais como forma de os professores se aproximarem de seus alunos. O resultado, como visto no gráfico a seguir, demonstra que 37.7% dos participantes concordam em utilizar as redes sociais como uma forma de os professores se paroximarem de seus alunos, 36.1% não concordam e 26.2% não possuem opinião a respeito dessa questão.
+ 
+##Redes Sociais
+ 
+ ``` {r, grafico10, echo=FALSE}
+prof=table(df$profchegaal)
+
+
+lbls <- c("Nao", "Sim", "Nao sei/Nao tenho opiniao")
+
+porcentagem_prof <- round(prof/sum(prof)*100, digits=1)
+
+
+lbls <- paste0(porcentagem_prof,"% ", lbls) 
+
+
+#png(filename="graficos/AproximacaoProfessores.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+### Geração do gráfico tipo pizza (pie)
+pie(prof, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "pink"), main = "Aproximacao dos Professores por meio de Midias Sociais")
+
+dev.off()
+
+```
+
+
+##Redes Sociais
+  Ainda que haja opniões a favor das redes sociais no universo educacional, existem barreiras que podem atrapalhar o caminho do desenvolvimento desta ferramenta como suporte ao ensino. Na pesquisa realizada, foram coletados dados a respeito das possiveis dificuldades encontradas, é possivel notar que as distrações são o grande enfoque negativo segundo os estudantes entrevistados, logo em seguida o uso indevido pode ser considerado um outra barreira forte a essa ideia de inserção das midias nos ambientes educacionais.
+  
+##Redes Socias
+``` {r, grafico11, echo=FALSE}
+
+principais_dificuldades <- c(
+  sum(df$distracao == '1'),
+  sum(df$usoindev == '1'),
+  sum(df$prejintera == '1'),
+  sum(df$bulling == '1'),
+  sum(df$continadeq == '1')
+)
+
+
+#png(filename="graficos/PrincipaisDistra??es", width = 800, height = 500, pointsize = 16)
+
+# Definindo a cor de fundo do gráfico
+par(bg = "bisque")
+
+# Geração do gráfico tipo barra (barplot)
+my_bar=barplot(principais_dificuldades, border=F, names.arg = NA, las=2,
+               col = c("red", "orange","yellow", "green3", "blue"),
+               ylab = "Quantidade",
+               xlab = "Dificuldades",
+               ylim = c(0,120),
+               main = "Dificuldades do uso das Redes Sociais em ambientes educacionais")
+# Adicionando o texto a ser exibido 
+text(my_bar, principais_dificuldades+4, paste("n = ",principais_dificuldades,sep=""),cex=1) 
+
+#Agora adicionando a legenda ao gráfico
+legend("topleft", legend = c("distra??o", "uso indevido", "prejudica a intera??o", "bulling", "publica??o de conteudo inadequado"),
+       col = c("red", "orange","yellow", "green3", "blue"),
+       bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
+       horiz = FALSE, inset = c(0.05, 0.05))
+
+```
+
+
+##Redes Sociais
+Outra questão levantada na pesquisa foi a respeito da integração das mídias sociais nas aulas e atividades objetivando que os alunos alcancem melhores resultados. 60.7% dos participantes concordam que a integração melhoraria o desepenho dos alunos, 13.1% não concordam e 26.2% não possuem opinião a respeito.
+
+
+##Redes Sociais
+``` {r, grafico12, echo=FALSE}
+melhoresult=table(df$melhoraresul)
+
+lbls <- c("Não", "Sim", "Não sei/Não tenho opinião")
+porcentagem_melhoresult <- round(melhoresult/sum(melhoresult)*100, digits=1)
+
+lbls <- paste0(porcentagem_melhoresult,"% ", lbls) 
+
+#png(filename="graficos/MelhoraResultado.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+ ### Geração do gráfico tipo pizza (pie)
+pie(melhoresult, labels = lbls, edges = 100, angle = 45, col = c("red","darkviolet", "pink"), main = "Integracao das Midias Sociais nas Aulas para que os Alunos Obtenham Melhores Resultados")
+ dev.off()
+
+```
+
+#Redes Sociais
+Nesse estudo, foram tambem constatados dados referente  ao envio de informações do local de ensino para os pais utilizando as midias sociais. Pode-se notar que mais da metade dos alunos entrevistados acreditam que esta é uma boa (37,7%) e tambem uma excelente(23%) ação a ser tomada pelas instituiçõees de ensino entretanto, ainda há no total 14% das pessoas que acreditam que isto não deveria ser feito, então é possivel constatar uma certa resistencia a este assunto por parte dos alunos.
+
+#Redes Sociais
+### 5. Muito ruim
+``` {r, grafico13, echo=FALSE}
+
+envioinfo=table(df$evioinfo)
+
+
+lbls <- c("Excelente", "Bom", "Indiferente", "Ruim", "Muito ruim")
+
+porcentagem_questoes <- round(envioinfo/sum(envioinfo)*100, digits=1)
+
+
+lbls <- paste0(porcentagem_questoes,"% ", lbls) 
+
+
+#png(filename="graficos/EnvioDeInformações.png", width = 800, height = 500, pointsize = 16)
+par(bg = "bisque")
+
+### Geração do gráfico tipo pizza (pie)
+pie(envioinfo, labels = lbls, edges = 100, angle = 45, col = c("blue","green", "yellow","orange", "red"), main = "Envio de informações da escola para os pais")
+
+dev.off()
+```
+
+## Conclusão
+
+   Com as informações apresentadas, concluímos que há sim diversos fatores que podem influenciar no uso das mídias sociais pelos discentes, tanto por fatores pessoais como idade, se possui filhos, estado civil, entre outros, como por fatores sociais como a busca por recolocação no mercado de trabalho. 
+   
+   
+## Conclusão
+
+  A maioria dos usuários declararam usar as redes sociais para motivos pessoais, como conteúdos interessantes, atualização de eventos e manter contato com amigos/familiares. Portanto, as mídias podem se tornar um meio de fácil distração dos fins acadêmicos. Os dados sobre o uso das plataformas já demonstra isso, onde os entrevistados utilizam redes mais direcionadas a produção de conteúdo, como instagram, facebook e youtube.
+  
+## Conclusão
+  Uma pequena minoria se mostrou totalmente contra o uso das redes sociais como ferramenta pelos professores, mostrando uma abertura para essa abordagem ser explorada. Porém uma porcentagem maior se mostrou contra a aproximação dos professores  pela rede social, podendo demonstrar que preferem um tratamento mais formal entre as partes.
+    
+## Referências Bibliográficas
+ABGCONSULTORIA. Uma breve introdução ao software R. Disponivel em: <http://www.abgconsultoria.com.br/blog/uma-breve-introducao-ao-software-r/>. Acesso em: 26/11/2018.
+
+BELL, Peter; BEER, Brent. Introdução ao GitHub. 1 ed. São Paulo: Novatec, 2015.
+
+CORRÊA, Iago da Cunha; ARAUJO, Cássio Castro; MEDINA, Alexandre Moreira. Tutorial Git. 2016. Disponível em: <http://coral.ufsm.br/pet-si/wp-content/uploads/2017/02/Consult%C3%B3rio-de-Software-Git.pdf>. Acesso em 26/11/2018.
+
+IBPAD. O que programação ou Linguagem R?. Disponível em: <https://www.ibpad.com.br/blog/o-que-e-programacao-ou-linguagem-em-r/>. Acesso em: 26/11/2018.
+
+## Referências Bibliográficas
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Anuário Estatístico da Unesp. Disponível em: <https://ape.unesp.br/anuario/>. Acesso em: 25/11/2018.
+
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Disponível em: <https://www.bauru.unesp.br/>. Acesso em: 25/11/2018.	
+
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Histórico da instituição Unesp. Disponível em: <https://www.fc.unesp.br/#!/instituicao/historico/>.Acesso em: 26/11/2018.	
+
+# Referências Bibliográficas
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Histórico da instituição Unesp. Disponível em: <http://www.faac.unesp.br/#!/instituicao/historico/>, .Acesso em: 26/11/2018.	
+
+UNIVERSIDADE ESTADUAL PAULISTA “JÚLIO DE MESQUITA FILHO”. Histórico da instituição Unesp. Disponível em: <http://www.feb.unesp.br/#!/instituicao/historico/> .Acesso em: 26/11/2018.	
+
+XIE, Y. ALLAIRE, J. J. GROLEMUND, G. R Markdown The Definitive Guide, Chapman & Hall/CRC,  2018. 
+
+
+    

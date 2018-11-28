@@ -382,6 +382,23 @@ dev.off()
          bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
          horiz = FALSE, inset = c(0.05, 0.05))
 ```  
+
+Segue o tempo gasto declarado pelos participantes.
+
+``` {r, grafico8, echo=TRUE}
+  tempo_gasto=table(df$tempogasto)
+  tempo_gasto
+  lbls <- c("Nenhum", "de 5 a 10min", "de 10 a 30min", "de 30min a 1hr", "de 1 a 2hr", "de 2 a 3hr", "de 3 a 4hr", "e 4 a 5hr", "mais de 5hr")
+  porcentagem_tempo_gasto <- round(tempo_gasto/sum(tempo_gasto)*100, digits=1)
+  porcentagem_tempo_gasto
+  lbls <- paste0(porcentagem_tempo_gasto,"% ", lbls) 
+  lbls
+  #png(filename="graficos/TempoGastoRedesSociais.png", width = 800, height = 500, pointsize = 16)
+  par(bg = "bisque")
+  ### Geração do gráfico tipo pizza (pie)
+  pie(tempo_gasto, labels = lbls, edges = 100, angle = 45, col = c("deepskyblue", "orange","darkviolet", "green3", "pink", "red", "purple","yellow", "grey", "green2","pink3"), 
+      main = "Tempo gasto nas Redes sociais")
+```  
   
   Nesta pesquisa, foram levantados dados sobre o uso das redes sociais como uma ferramenta que pode ser usada pelos professores da universidade, 62.3%  declaram que as redes devem ser utilizadas como ferramenta dos professores entretanto, 1.6% dizem que nao deveria ser utilizada como auxilio do professor, 31.1% dos entrevistados declaram que sim porem com restrições e por fim 4.9% disseram não haver uma opnião formada sobre o assunto discutido.
   
@@ -389,7 +406,7 @@ dev.off()
 ### 2. Sim
 ### 3. Sim, porem com restrições
 ### 4. Não tenho opnião
-``` {r, grafico8, echo=TRUE}
+``` {r, grafico9, echo=TRUE}
 academico=table(df$usoacademico)
 academico
 
@@ -415,7 +432,7 @@ dev.off()
 ### 1. Não
 ### 2. Sim
 ### 3. Não sei/Não tenho opnião
-``` {r, grafico9, echo=TRUE}
+``` {r, grafico10, echo=TRUE}
 prof=table(df$profchegaal)
 prof
 
@@ -439,7 +456,7 @@ dev.off()
 
   Ainda que haja opni?es a favor das redes sociais no universo educacional, existem barreiras que podem atrapalhar o caminho do desenvolvimento desta ferramenta como suporte ao ensino. Na pesquisa realizada, foram coletados dados a respeito das possiveis dificuldades encontradas, ? possivel notar que as distra??es s?o o grande enfoque negativo segundo os estudantes entrevistados, logo em seguida o uso indevido pode ser considerado um outra barreira forte a essa ideia de inser??o das midias nos ambientes educacionais.
   
-``` {r, grafico10, echo=TRUE}
+``` {r, grafico11, echo=TRUE}
 principais_dificuldades <- c(
   sum(df$distracao == '1'),
   sum(df$usoindev == '1'),
@@ -479,7 +496,7 @@ Outra questão levantada na pesquisa foi a respeito da integração das mídias 
 ### 2. Sim
 ### 4. Não sei/Não tenho opnião
 
-``` {r, graficoMelhoresResultados, echo=TRUE}
+``` {r, grafico12, echo=TRUE}
 melhoresult=table(df$melhoraresul)
 melhoresult
 lbls <- c("Não", "Sim", "Não sei/Não tenho opinião")
@@ -501,7 +518,7 @@ pie(melhoresult, labels = lbls, edges = 100, angle = 45, col = c("red","darkviol
 ### 3. Indiferente
 ### 4. Ruim
 ### 5. Muito ruim
-``` {r, grafico10, echo=TRUE}
+``` {r, grafico13, echo=TRUE}
 
 envioinfo=table(df$evioinfo)
 envioinfo

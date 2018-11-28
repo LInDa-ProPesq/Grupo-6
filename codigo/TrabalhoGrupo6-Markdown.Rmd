@@ -385,10 +385,10 @@ dev.off()
 
 ```
 
-<<<<<<< HEAD
-  Ainda que haja opniões a favor das redes sociais no universo educacional, existem barreiras que podem atrapalhar o caminho do desenvolvimento desta ferramenta como suporte ao ensino. Na pesquisa realizada, foram coletados dados a respeito das possiveis dificuldades encontradas, é possivel notar que as distrações são o grande enfoque negativo segundo os estudantes entrevistados, logo em seguida o uso indevido pode ser considerado um outra barreira forte a essa ideia de inserção das midias nos ambientes educacionais.
+
+  Ainda que haja opniÃµes a favor das redes sociais no universo educacional, existem barreiras que podem atrapalhar o caminho do desenvolvimento desta ferramenta como suporte ao ensino. Na pesquisa realizada, foram coletados dados a respeito das possiveis dificuldades encontradas, Ã© possivel notar que as distraÃ§Ãµes sÃ£o o grande enfoque negativo segundo os estudantes entrevistados, logo em seguida o uso indevido pode ser considerado um outra barreira forte a essa ideia de inserÃ§Ã£o das midias nos ambientes educacionais.
   
-``` {r, grafico9, echo=TRUE}
+``` {r, graficoDistrac, echo=TRUE}
 principais_dificuldades <- c(
   sum(df$distracao == '1'),
   sum(df$usoindev == '1'),
@@ -398,7 +398,7 @@ principais_dificuldades <- c(
 )
 principais_dificuldades
 
-#png(filename="graficos/PrincipaisDistrações", width = 800, height = 500, pointsize = 16)
+#png(filename="graficos/PrincipaisDistra??es", width = 800, height = 500, pointsize = 16)
 
 # Definindo a cor de fundo do grÃ¡fico
 par(bg = "bisque")
@@ -414,20 +414,20 @@ my_bar=barplot(principais_dificuldades, border=F, names.arg = NA, las=2,
 text(my_bar, principais_dificuldades+4, paste("n = ",principais_dificuldades,sep=""),cex=1) 
 
 #Agora adicionando a legenda ao grÃ¡fico
-legend("topleft", legend = c("distração", "uso indevido", "prejudica a interação", "bulling", "publicação de conteudo inadequado"),
+legend("topleft", legend = c("distra??o", "uso indevido", "prejudica a intera??o", "bulling", "publica??o de conteudo inadequado"),
        col = c("red", "orange","yellow", "green3", "blue"),
        bty = "n", pch=20 , pt.cex = 2, cex = 0.8, 
        horiz = FALSE, inset = c(0.05, 0.05))
 
 ```
 
-=======
+
 Outra questÃ£o levantada na pesquisa foi a respeito da integraÃ§Ã£o das mÃ­dias sociais nas aulas e atividades objetivando que os alunos alcancem melhores resultados. 60.7% dos participantes concordam que a integraÃ§Ã£o melhoraria o desepenho dos alunos, 13.1% nÃ£o concordam e 26.2% nÃ£o possuem opiniÃ£o a respeito.
   
 ### 1. NÃ£o
 ### 2. Sim
 ### 4. NÃ£o sei/NÃ£o tenho opniÃ£o
->>>>>>> c3493d30f4df26ec443c7c5ac0168508759098ce
+
 
 ``` {r, graficoMelhoresResultados, echo=TRUE}
 melhoresult=table(df$melhoraresul)

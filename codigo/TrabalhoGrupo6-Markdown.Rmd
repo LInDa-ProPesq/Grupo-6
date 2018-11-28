@@ -547,6 +547,8 @@ dev.off()
 # Conclusão
 
    Com as informações apresentadas, concluímos que há sim diversos fatores que podem influenciar no uso das mídias sociais pelos discentes, tanto por fatores pessoais como idade, se possui filhos, estado civil, entre outros, como por fatores sociais como a busca por recolocação no mercado de trabalho. 
+   
+  A maioria dos usuários declararam usar as redes sociais para motivos pessoais, como conteúdos interessantes, atualização de eventos e manter contato com amigos/familiares. Portanto, as mídias podem se tornar um meio de fácil distração dos fins acadêmicos. Os dados sobre o uso das plataformas já demonstra isso, onde os entrevistados utilizam redes mais direcionadas a produção de conteúdo, como instagram, facebook e youtube.
     
   Uma pequena minoria se mostrou totalmente contra o uso das redes sociais como ferramenta pelos professores, mostrando uma abertura para essa abordagem ser explorada. Porém uma porcentagem maior se mostrou contra a aproximação dos professores  pela rede social, podendo demonstrar que preferem um tratamento mais formal entre as partes.
     
